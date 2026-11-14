@@ -1,0 +1,2246 @@
+{
+  "_provenance": {
+    "kind": "recorded-rpc",
+    "network": "mainnet",
+    "rpcUrl": "https://free.rpc.fastnear.com",
+    "lendingId": "contract.main.burrow.near",
+    "accountId": "brianphan01.near",
+    "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+    "blockHeight": 223245720,
+    "recordedAt": "2026-11-06T01:13:43.945Z"
+  },
+  "calls": [
+    {
+      "contractId": "contract.main.burrow.near",
+      "method": "get_config",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "oracle_account_id": "priceoracle.near",
+        "pyth_oracle_account_id": "aggregate-oracle.near",
+        "ref_exchange_id": "v2.ref-finance.near",
+        "owner_id": "burrow.sputnik-dao.near",
+        "booster_token_id": "token.burrow.near",
+        "booster_decimals": 18,
+        "max_num_assets": 20,
+        "maximum_recency_duration_sec": 90,
+        "maximum_staleness_duration_sec": 90,
+        "lp_tokens_info_valid_duration_sec": 600,
+        "pyth_price_valid_duration_sec": 60,
+        "minimum_staking_duration_sec": 2592000,
+        "maximum_staking_duration_sec": 7776000,
+        "x_booster_multiplier_at_maximum_staking_duration": 30000,
+        "force_closing_enabled": true,
+        "enable_price_oracle": false,
+        "enable_pyth_oracle": true,
+        "contract_mode": "Running",
+        "boost_suppress_factor": 1000,
+        "dcl_id": "dclv2.ref-labs.near",
+        "pause_operator_id": null
+      }
+    },
+    {
+      "contractId": "contract.main.burrow.near",
+      "method": "get_version",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": "0.16.2"
+    },
+    {
+      "contractId": "contract.main.burrow.near",
+      "method": "get_assets_paged_detailed",
+      "args": {
+        "from_index": 0,
+        "limit": 20
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": [
+        {
+          "token_id": "token.burrow.near",
+          "supplied": {
+            "shares": "26183580119084964407617143",
+            "balance": "26183580119084964407617143"
+          },
+          "borrowed": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "366645999986175999700",
+          "prot_fee": "0",
+          "beneficiary_fees": {},
+          "uahpi": "0",
+          "last_update_timestamp": "1793927619332263586",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {},
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000000000000000000000",
+            "max_utilization_rate": "1000000000000000000000000000",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 6000,
+            "extra_decimals": 0,
+            "can_deposit": false,
+            "can_withdraw": true,
+            "can_use_as_collateral": false,
+            "can_borrow": false,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "0",
+            "borrowed_limit": "0",
+            "min_borrowed_amount": "10000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.0",
+          "borrow_apr": "0.0",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "token.burrow.near"
+              },
+              "rewards": {}
+            },
+            {
+              "farm_id": {
+                "Borrowed": "token.burrow.near"
+              },
+              "rewards": {
+                "token.burrow.near": {
+                  "reward_per_day": "864000",
+                  "booster_log_bases": {},
+                  "remaining_rewards": "10000000864000100",
+                  "boosted_shares": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "token_id": "aurora",
+          "supplied": {
+            "shares": "13736139448343328815",
+            "balance": "14012073557077668484"
+          },
+          "borrowed": {
+            "shares": "5878247966525131128",
+            "balance": "6258535245028978407"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "10430713774067860088",
+          "prot_fee": "0",
+          "beneficiary_fees": {},
+          "uahpi": "0",
+          "last_update_timestamp": "1793927619332302131",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {},
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000000000000000000000",
+            "max_utilization_rate": "1000000000000000000000000000",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 7500,
+            "extra_decimals": 0,
+            "can_deposit": false,
+            "can_withdraw": true,
+            "can_use_as_collateral": false,
+            "can_borrow": false,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "0",
+            "borrowed_limit": "0",
+            "min_borrowed_amount": "10000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.0",
+          "borrow_apr": "0.0",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "aurora"
+              },
+              "rewards": {}
+            },
+            {
+              "farm_id": {
+                "Borrowed": "aurora"
+              },
+              "rewards": {}
+            },
+            {
+              "farm_id": {
+                "TokenNetBalance": "aurora"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "6b175474e89094c44da98b954eedeac495271d0f.factory.bridge.near",
+          "supplied": {
+            "shares": "148113845669682874188875",
+            "balance": "189045958147467062690207"
+          },
+          "borrowed": {
+            "shares": "155771750544972046954492",
+            "balance": "205946072493779946372280"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "57109914086417666143248",
+          "prot_fee": "0",
+          "beneficiary_fees": {
+            "pf.rhealab.near": "118688377831473393082"
+          },
+          "uahpi": "43718944534832901",
+          "last_update_timestamp": "1793927619332871816",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {
+              "pf.rhealab.near": 10000
+            },
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000001847694955734069",
+            "max_utilization_rate": "1000000000012857214234867166",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 9500,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "500000000000000000000000",
+            "borrowed_limit": "283000000000000000000000",
+            "min_borrowed_amount": "1000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.105914612925444070113858402",
+          "borrow_apr": "0.129630889872321030314318151",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "6b175474e89094c44da98b954eedeac495271d0f.factory.bridge.near"
+              },
+              "rewards": {}
+            },
+            {
+              "farm_id": {
+                "Borrowed": "6b175474e89094c44da98b954eedeac495271d0f.factory.bridge.near"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "dac17f958d2ee523a2206206994597c13d831ec7.factory.bridge.near",
+          "supplied": {
+            "shares": "264240608992327370580195",
+            "balance": "341444226372338707773302"
+          },
+          "borrowed": {
+            "shares": "265772892477054282020361",
+            "balance": "363296973895156924212022"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "100000984363658916419933",
+          "prot_fee": "0",
+          "beneficiary_fees": {
+            "pf.rhealab.near": "218037626123811566084"
+          },
+          "uahpi": "0",
+          "last_update_timestamp": "1793927619332407067",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {
+              "pf.rhealab.near": 10000
+            },
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000001847694955734069",
+            "max_utilization_rate": "1000000000012857214234867166",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 9500,
+            "extra_decimals": 12,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "1500000000000000000000000",
+            "borrowed_limit": "980000000000000000000000",
+            "min_borrowed_amount": "1000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.082294271835851473950410925",
+          "borrow_apr": "0.10312556393593394621566853",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "dac17f958d2ee523a2206206994597c13d831ec7.factory.bridge.near"
+              },
+              "rewards": {}
+            },
+            {
+              "farm_id": {
+                "Borrowed": "dac17f958d2ee523a2206206994597c13d831ec7.factory.bridge.near"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.factory.bridge.near",
+          "supplied": {
+            "shares": "187992374565566341941287",
+            "balance": "245953568025883610729399"
+          },
+          "borrowed": {
+            "shares": "206542554405442461391257",
+            "balance": "283576366018807789513180"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "100000560868811308829702",
+          "prot_fee": "0",
+          "beneficiary_fees": {
+            "pf.rhealab.near": "158685920060273220554"
+          },
+          "uahpi": "0",
+          "last_update_timestamp": "1793927619332649970",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {
+              "pf.rhealab.near": 10000
+            },
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000001847694955734069",
+            "max_utilization_rate": "1000000000012857214234867166",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 9500,
+            "extra_decimals": 12,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "1000000000000000000000000",
+            "borrowed_limit": "663000000000000000000000",
+            "min_borrowed_amount": "1000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.083762011133006974444854006",
+          "borrow_apr": "0.09686545599652444187615797",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.factory.bridge.near"
+              },
+              "rewards": {}
+            },
+            {
+              "farm_id": {
+                "Borrowed": "a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.factory.bridge.near"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "wrap.near",
+          "supplied": {
+            "shares": "3148019819118475458395144361984",
+            "balance": "3327103752962024451406712172858"
+          },
+          "borrowed": {
+            "shares": "484132599851259053218900577435",
+            "balance": "588144396479641420007329656373"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "14260110831671506280286104895",
+          "prot_fee": "15056090293766951744727053",
+          "beneficiary_fees": {
+            "pf.rhealab.near": "77571113498823534624376083"
+          },
+          "uahpi": "42949661445713275",
+          "last_update_timestamp": "1793927619332177847",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {
+              "pf.rhealab.near": 10000
+            },
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000003593629036885046",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 7500,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "3600000000000000000000000000000",
+            "borrowed_limit": "1000000000000000000000000000000",
+            "min_borrowed_amount": "1000000000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.003347439860169867872481093",
+          "borrow_apr": "0.025248402236476651729718106",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "wrap.near"
+              },
+              "rewards": {}
+            },
+            {
+              "farm_id": {
+                "Borrowed": "wrap.near"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "meta-pool.near",
+          "supplied": {
+            "shares": "5285397233951849664815332567449",
+            "balance": "5292571023705421414603198577392"
+          },
+          "borrowed": {
+            "shares": "8574133800999832730985642203",
+            "balance": "8720791231143799225095858065"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "2571186808010086675273682321",
+          "prot_fee": "0",
+          "beneficiary_fees": {
+            "pf.rhealab.near": "291138318597072251443470"
+          },
+          "uahpi": "0",
+          "last_update_timestamp": "1793927619332141786",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {
+              "pf.rhealab.near": 10000
+            },
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000003593629036885046",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 7000,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "6000000000000000000000000000000",
+            "borrowed_limit": "26000000000000000000000000000",
+            "min_borrowed_amount": "1000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.00000028835616890591074715",
+          "borrow_apr": "0.000233334409475436808167445",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "meta-pool.near"
+              },
+              "rewards": {}
+            },
+            {
+              "farm_id": {
+                "Borrowed": "meta-pool.near"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "2260fac5e5542a773aa44fbcfedf7c193bc2c599.factory.bridge.near",
+          "supplied": {
+            "shares": "8250523207089624662",
+            "balance": "8417709137372392979"
+          },
+          "borrowed": {
+            "shares": "3778420525235787759",
+            "balance": "4083808771747617187"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "599728425137542201",
+          "prot_fee": "0",
+          "beneficiary_fees": {},
+          "uahpi": "0",
+          "last_update_timestamp": "1793927619332626075",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {},
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000001547125956667610",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 7500,
+            "extra_decimals": 10,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "15000000000000000000",
+            "borrowed_limit": "5000000000000000000",
+            "min_borrowed_amount": "1000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.01018987168623599940468397",
+          "borrow_apr": "0.028005025307187913297638853",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "2260fac5e5542a773aa44fbcfedf7c193bc2c599.factory.bridge.near"
+              },
+              "rewards": {}
+            },
+            {
+              "farm_id": {
+                "Borrowed": "2260fac5e5542a773aa44fbcfedf7c193bc2c599.factory.bridge.near"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "meta-token.near",
+          "supplied": {
+            "shares": "1065021479920117657388324317151",
+            "balance": "1065021479920117657388324317151"
+          },
+          "borrowed": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "0",
+          "prot_fee": "0",
+          "beneficiary_fees": {
+            "burrow.sputnik-dao.near": "0"
+          },
+          "uahpi": "0",
+          "last_update_timestamp": "1793927619332118326",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {},
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000000000000000000000",
+            "max_utilization_rate": "1000000000000000000000000000",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 1,
+            "extra_decimals": 0,
+            "can_deposit": false,
+            "can_withdraw": true,
+            "can_use_as_collateral": false,
+            "can_borrow": false,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "0",
+            "borrowed_limit": "0",
+            "min_borrowed_amount": "1000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.0",
+          "borrow_apr": "0.0",
+          "farms": []
+        },
+        {
+          "token_id": "usn",
+          "supplied": {
+            "shares": "10111002253563755272928",
+            "balance": "10515278734670107806627"
+          },
+          "borrowed": {
+            "shares": "1605583907171099900967",
+            "balance": "1831612298699437455504"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "1938209980896803953890",
+          "prot_fee": "0",
+          "beneficiary_fees": {},
+          "uahpi": "0",
+          "last_update_timestamp": "1793927619332466893",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {},
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000000000000000000000",
+            "max_utilization_rate": "1000000000000000000000000000",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 8000,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": false,
+            "can_borrow": false,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "0",
+            "borrowed_limit": "0",
+            "min_borrowed_amount": "1000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.0",
+          "borrow_apr": "0.0",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "usn"
+              },
+              "rewards": {}
+            },
+            {
+              "farm_id": {
+                "Borrowed": "usn"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "aaaaaa20d9e0e2461697782ef11675f668207961.factory.bridge.near",
+          "supplied": {
+            "shares": "62744337122988839992572",
+            "balance": "79936177882040065794744"
+          },
+          "borrowed": {
+            "shares": "3272771649268907344495",
+            "balance": "5461330401456930652893"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "9827971190498388325757",
+          "prot_fee": "0",
+          "beneficiary_fees": {},
+          "uahpi": "0",
+          "last_update_timestamp": "1793927619332003435",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {},
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000010669464631627598",
+            "max_utilization_rate": "1000000000056816320055776116",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 4000,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": false,
+            "can_borrow": true,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "120000000000000000000000",
+            "borrowed_limit": "8000000000000000000000",
+            "min_borrowed_amount": "1000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.001328126877513858457477999",
+          "borrow_apr": "0.02591929768676737657435361",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "aaaaaa20d9e0e2461697782ef11675f668207961.factory.bridge.near"
+              },
+              "rewards": {}
+            },
+            {
+              "farm_id": {
+                "Borrowed": "aaaaaa20d9e0e2461697782ef11675f668207961.factory.bridge.near"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "linear-protocol.near",
+          "supplied": {
+            "shares": "7889163851925466498215678913457",
+            "balance": "7890750537155287717787249876972"
+          },
+          "borrowed": {
+            "shares": "286306889801029173545008082",
+            "balance": "287793617286325848421495887"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "58492886721943713029817915",
+          "prot_fee": "11666984235392705671804676",
+          "beneficiary_fees": {
+            "pf.rhealab.near": "2658309165172770295193"
+          },
+          "uahpi": "0",
+          "last_update_timestamp": "1793927619332524330",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {
+              "pf.rhealab.near": 10000
+            },
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000003593629036885046",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 7000,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "8650000000000000000000000000000",
+            "borrowed_limit": "3000000000000000000000000000",
+            "min_borrowed_amount": "1000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.000000000141329907977524392",
+          "borrow_apr": "0.000005166661015882301669814",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "linear-protocol.near"
+              },
+              "rewards": {}
+            },
+            {
+              "farm_id": {
+                "Borrowed": "linear-protocol.near"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "4691937a7508860f876c9c0a2a617e7d9e945d4b.factory.bridge.near",
+          "supplied": {
+            "shares": "11904734490149536943879",
+            "balance": "22599293546489805990280"
+          },
+          "borrowed": {
+            "shares": "10933512931429454548275",
+            "balance": "27891124237602382969877"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "5336305084006483058991",
+          "prot_fee": "0",
+          "beneficiary_fees": {},
+          "uahpi": "0",
+          "last_update_timestamp": "1793927619332031241",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {},
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000000000000000000000",
+            "max_utilization_rate": "1000000000000000000000000000",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 5000,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": false,
+            "can_borrow": false,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "0",
+            "borrowed_limit": "0",
+            "min_borrowed_amount": "1000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.00000000000000005838063023",
+          "borrow_apr": "0.000000000000000063072",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "4691937a7508860f876c9c0a2a617e7d9e945d4b.factory.bridge.near"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "v2-nearx.stader-labs.near",
+          "supplied": {
+            "shares": "163478480948942405873996856",
+            "balance": "163502440170818812127937109"
+          },
+          "borrowed": {
+            "shares": "1876289970515101476126564",
+            "balance": "1887297022108737248250877"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "25014177820635914505977139",
+          "prot_fee": "0",
+          "beneficiary_fees": {},
+          "uahpi": "0",
+          "last_update_timestamp": "1793927619332036139",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {},
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000000000000000000000",
+            "max_utilization_rate": "1000000000000000000000000000",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 7000,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": false,
+            "can_borrow": false,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "0",
+            "borrowed_limit": "0",
+            "min_borrowed_amount": "1000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.0",
+          "borrow_apr": "0.0",
+          "farms": []
+        },
+        {
+          "token_id": "usdt.tether-token.near",
+          "supplied": {
+            "shares": "10930963868725735801302386",
+            "balance": "12606955782273057019513696"
+          },
+          "borrowed": {
+            "shares": "8617294991754207595473275",
+            "balance": "10802549577423775640390758"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "200005479467782202223635",
+          "prot_fee": "316542974456034767656",
+          "beneficiary_fees": {
+            "pf.rhealab.near": "9115662964805538769427"
+          },
+          "uahpi": "42949632793418147",
+          "last_update_timestamp": "1793927619332467699",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {
+              "pf.rhealab.near": 10000
+            },
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000001847694955734069",
+            "max_utilization_rate": "1000000000012857214234867166",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 9500,
+            "extra_decimals": 12,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 10000,
+            "max_change_rate": null,
+            "supplied_limit": "60000000000000000000000000",
+            "borrowed_limit": "22000000000000000000000000",
+            "min_borrowed_amount": "1000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.091954586412088829358479256",
+          "borrow_apr": "0.143085654186324201456876852",
+          "farms": [
+            {
+              "farm_id": {
+                "TokenNetBalance": "usdt.tether-token.near"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "supplied": {
+            "shares": "11154530112565270514278493",
+            "balance": "12899694502434759986489234"
+          },
+          "borrowed": {
+            "shares": "8688875713595325151044063",
+            "balance": "10918581691829959219884841"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "200002851391639234112802",
+          "prot_fee": "672994604193599068728",
+          "beneficiary_fees": {
+            "pf.rhealab.near": "9818672327411563965323"
+          },
+          "uahpi": "42948783399248463",
+          "last_update_timestamp": "1793927619332118778",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {
+              "pf.rhealab.near": 10000
+            },
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000001847694955734069",
+            "max_utilization_rate": "1000000000012857214234867166",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 9500,
+            "extra_decimals": 12,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 10000,
+            "max_change_rate": null,
+            "supplied_limit": "60000000000000000000000000",
+            "borrowed_limit": "25000000000000000000000000",
+            "min_borrowed_amount": "1000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.078327780737751408631434697",
+          "borrow_apr": "0.123386531460918210647017032",
+          "farms": [
+            {
+              "farm_id": {
+                "TokenNetBalance": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "shadow_ref_v1-4179",
+          "supplied": {
+            "shares": "64832488755972415046940345",
+            "balance": "64832488755972415046940345"
+          },
+          "borrowed": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "0",
+          "prot_fee": "0",
+          "beneficiary_fees": {},
+          "uahpi": "0",
+          "last_update_timestamp": "1793927619332652482",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {},
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000000000000000000000",
+            "max_utilization_rate": "1000000000000000000000000000",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 5000,
+            "extra_decimals": 0,
+            "can_deposit": false,
+            "can_withdraw": true,
+            "can_use_as_collateral": false,
+            "can_borrow": false,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "0",
+            "borrowed_limit": "0",
+            "min_borrowed_amount": "1000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.0",
+          "borrow_apr": "0.0",
+          "farms": []
+        },
+        {
+          "token_id": "853d955acef822db058eb8505911ed77f175b99e.factory.bridge.near",
+          "supplied": {
+            "shares": "176079053454882633523930",
+            "balance": "199264313369283356376447"
+          },
+          "borrowed": {
+            "shares": "157499880874266463691270",
+            "balance": "190570064331445780337662"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "20715465340815757262090",
+          "prot_fee": "0",
+          "beneficiary_fees": {
+            "pf.rhealab.near": "175268989790501241776"
+          },
+          "uahpi": "0",
+          "last_update_timestamp": "1793927619332736811",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {
+              "pf.rhealab.near": 10000
+            },
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000001847694955734069",
+            "max_utilization_rate": "1000000000012857214234867166",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 8000,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": false,
+            "can_borrow": true,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "230000000000000000000000",
+            "borrowed_limit": "230000000000000000000000",
+            "min_borrowed_amount": "1000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.135790649543848320577387283",
+          "borrow_apr": "0.189314312565296042587801572",
+          "farms": [
+            {
+              "farm_id": {
+                "TokenNetBalance": "853d955acef822db058eb8505911ed77f175b99e.factory.bridge.near"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "a663b02cf0a4b149d2ad41910cb81e23e1c41c32.factory.bridge.near",
+          "supplied": {
+            "shares": "30931994355630747036",
+            "balance": "32349200658566413587"
+          },
+          "borrowed": {
+            "shares": "13563870753311876336",
+            "balance": "14722513710122655567"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "316782421965117781",
+          "prot_fee": "0",
+          "beneficiary_fees": {},
+          "uahpi": "0",
+          "last_update_timestamp": "1793927619332053846",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {},
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000000000000000000000",
+            "max_utilization_rate": "1000000000000000000000000000",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 7000,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": false,
+            "can_borrow": false,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "0",
+            "borrowed_limit": "0",
+            "min_borrowed_amount": "1000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.0",
+          "borrow_apr": "0.0",
+          "farms": []
+        },
+        {
+          "token_id": "nbtc.bridge.near",
+          "supplied": {
+            "shares": "5059205737851544187",
+            "balance": "5065759607239245452"
+          },
+          "borrowed": {
+            "shares": "1648065129428007594",
+            "balance": "1663326080608543216"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "1466216852025668",
+          "prot_fee": "168946709805224",
+          "beneficiary_fees": {
+            "pf.rhealab.near": "1682725717881815"
+          },
+          "uahpi": "43719463262215878",
+          "last_update_timestamp": "1793927619332515743",
+          "config": {
+            "reserve_ratio": 2500,
+            "beneficiaries": {
+              "pf.rhealab.near": 10000
+            },
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000001547125956667610",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 8000,
+            "extra_decimals": 10,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 0,
+            "max_change_rate": null,
+            "supplied_limit": "20000000000000000000",
+            "borrowed_limit": "4000000000000000000",
+            "min_borrowed_amount": "1000000000"
+          },
+          "lostfound_shares": "0",
+          "supply_apr": "0.004979471861845713320223772",
+          "borrow_apr": "0.020220374679544644023936636",
+          "farms": [
+            {
+              "farm_id": {
+                "TokenNetBalance": "nbtc.bridge.near"
+              },
+              "rewards": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "contractId": "contract.main.burrow.near",
+      "method": "get_assets_paged_detailed",
+      "args": {
+        "from_index": 20,
+        "limit": 20
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": []
+    },
+    {
+      "contractId": "contract.main.burrow.near",
+      "method": "get_all_token_pyth_infos",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "eth.bridge.near": {
+          "decimals": 18,
+          "fraction_digits": 2,
+          "price_identifier": "ff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace",
+          "extra_call": null,
+          "default_price": null
+        },
+        "usdt.tether-token.near": {
+          "decimals": 6,
+          "fraction_digits": 4,
+          "price_identifier": "2b89b9dc8fdf9f34709a5b106b472f0f39bb6ca9ce04b0fd7f2e971688e2e53b",
+          "extra_call": null,
+          "default_price": null
+        },
+        "45.contract.portalbridge.near": {
+          "decimals": 8,
+          "fraction_digits": 4,
+          "price_identifier": "f42978c0e26f9f3148e4b43f62891475dde489e145ea5248749cd007dcc35fb6",
+          "extra_call": null,
+          "default_price": null
+        },
+        "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1": {
+          "decimals": 6,
+          "fraction_digits": 4,
+          "price_identifier": "eaa020c61cc479712813461ce153894a96a6c00b21ed0cfc2798d1f9a9e9c94a",
+          "extra_call": null,
+          "default_price": null
+        },
+        "6b175474e89094c44da98b954eedeac495271d0f.factory.bridge.near": {
+          "decimals": 18,
+          "fraction_digits": 4,
+          "price_identifier": "b0948a5e5313200c632b51bb5ca32f6de0d36e9950a942d19751e833f70dabfd",
+          "extra_call": null,
+          "default_price": null
+        },
+        "v2-nearx.stader-labs.near": {
+          "decimals": 24,
+          "fraction_digits": 4,
+          "price_identifier": "c415de8d2eba7db216527dff4b60e8f3a5311c740dadb233e13e12547e226750",
+          "extra_call": "get_nearx_price",
+          "default_price": null
+        },
+        "aaaaaa20d9e0e2461697782ef11675f668207961.factory.bridge.near": {
+          "decimals": 18,
+          "fraction_digits": 5,
+          "price_identifier": "2f7c4f738d498585065a4b87b637069ec99474597da7f0ca349ba8ac3ba9cac5",
+          "extra_call": null,
+          "default_price": null
+        },
+        "a663b02cf0a4b149d2ad41910cb81e23e1c41c32.factory.bridge.near": {
+          "decimals": 18,
+          "fraction_digits": 2,
+          "price_identifier": "0000000000000000000000000000000000000000000000000000000000000000",
+          "extra_call": null,
+          "default_price": {
+            "multiplier": "1",
+            "decimals": 20
+          }
+        },
+        "xtoken.rhealab.near": {
+          "decimals": 18,
+          "fraction_digits": 6,
+          "price_identifier": "ded2a0d2624278a32c56725397cc98b24ddb83d8c4d2ce108b1fc44b1d8de22b",
+          "extra_call": "get_high_precision_virtual_price",
+          "default_price": null
+        },
+        "zec.omft.near": {
+          "decimals": 8,
+          "fraction_digits": 4,
+          "price_identifier": "be9b59d178f0d6a97ab4c343bff2aa69caa1eaae3e9048a65788c529b125bb24",
+          "extra_call": null,
+          "default_price": null
+        },
+        "nbtc.bridge.near": {
+          "decimals": 8,
+          "fraction_digits": 2,
+          "price_identifier": "e62df6c8b4a85fe1a67db44dc12de5db330f7ac66b72dc658afedf0f4a415b43",
+          "extra_call": null,
+          "default_price": null
+        },
+        "qtc.omft.near": {
+          "decimals": 12,
+          "fraction_digits": 4,
+          "price_identifier": "e0f39655e4708ec38f36f704c1d01238b4d63cdfb6ce18243d3c3684b5e9c2ed",
+          "extra_call": null,
+          "default_price": null
+        },
+        "dac17f958d2ee523a2206206994597c13d831ec7.factory.bridge.near": {
+          "decimals": 6,
+          "fraction_digits": 4,
+          "price_identifier": "2b89b9dc8fdf9f34709a5b106b472f0f39bb6ca9ce04b0fd7f2e971688e2e53b",
+          "extra_call": null,
+          "default_price": null
+        },
+        "a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.factory.bridge.near": {
+          "decimals": 6,
+          "fraction_digits": 4,
+          "price_identifier": "eaa020c61cc479712813461ce153894a96a6c00b21ed0cfc2798d1f9a9e9c94a",
+          "extra_call": null,
+          "default_price": null
+        },
+        "853d955acef822db058eb8505911ed77f175b99e.factory.bridge.near": {
+          "decimals": 18,
+          "fraction_digits": 4,
+          "price_identifier": "7c53208632935ba5122c3cf65a0f4b3e72ba4955b49ad6ba0acf3d9ba405aef3",
+          "extra_call": null,
+          "default_price": null
+        },
+        "wrap.near": {
+          "decimals": 24,
+          "fraction_digits": 4,
+          "price_identifier": "c415de8d2eba7db216527dff4b60e8f3a5311c740dadb233e13e12547e226750",
+          "extra_call": null,
+          "default_price": null
+        },
+        "2260fac5e5542a773aa44fbcfedf7c193bc2c599.factory.bridge.near": {
+          "decimals": 8,
+          "fraction_digits": 2,
+          "price_identifier": "c9d8b075a5c69303365ae23633d4e085199bf5c520a3b90fed1322a0342ffc33",
+          "extra_call": null,
+          "default_price": null
+        },
+        "linear-protocol.near": {
+          "decimals": 24,
+          "fraction_digits": 4,
+          "price_identifier": "c415de8d2eba7db216527dff4b60e8f3a5311c740dadb233e13e12547e226750",
+          "extra_call": "ft_price",
+          "default_price": null
+        },
+        "meta-pool.near": {
+          "decimals": 24,
+          "fraction_digits": 4,
+          "price_identifier": "c415de8d2eba7db216527dff4b60e8f3a5311c740dadb233e13e12547e226750",
+          "extra_call": "get_st_near_price",
+          "default_price": null
+        },
+        "4691937a7508860f876c9c0a2a617e7d9e945d4b.factory.bridge.near": {
+          "decimals": 18,
+          "fraction_digits": 6,
+          "price_identifier": "b82449fd728133488d2d41131cffe763f9c1693b73c544d9ef6aaa371060dd25",
+          "extra_call": null,
+          "default_price": null
+        },
+        "aurora": {
+          "decimals": 18,
+          "fraction_digits": 2,
+          "price_identifier": "ff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace",
+          "extra_call": null,
+          "default_price": null
+        },
+        "lst.rhealab.near": {
+          "decimals": 24,
+          "fraction_digits": 4,
+          "price_identifier": "c415de8d2eba7db216527dff4b60e8f3a5311c740dadb233e13e12547e226750",
+          "extra_call": "ft_price",
+          "default_price": null
+        }
+      }
+    },
+    {
+      "contractId": "contract.main.burrow.near",
+      "method": "get_account",
+      "args": {
+        "account_id": "brianphan01.near"
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "account_id": "brianphan01.near",
+        "supplied": [
+          {
+            "token_id": "token.burrow.near",
+            "balance": "25586967752618446",
+            "shares": "25586967752618446",
+            "apr": "0.0"
+          },
+          {
+            "token_id": "meta-token.near",
+            "balance": "58310711571640570446780",
+            "shares": "58310711571640570446780",
+            "apr": "0.0"
+          },
+          {
+            "token_id": "meta-pool.near",
+            "balance": "85417729270095040480965",
+            "shares": "85301950222772561022198",
+            "apr": "0.00000028835616890591074715"
+          },
+          {
+            "token_id": "wrap.near",
+            "balance": "21241486979063752955066",
+            "shares": "20098147506854429451028",
+            "apr": "0.003347439860169867872481093"
+          }
+        ],
+        "collateral": [
+          {
+            "token_id": "wrap.near",
+            "balance": "10568548742527129718461",
+            "shares": "9999688429065587306197",
+            "apr": "0.003347439860169867872481093"
+          }
+        ],
+        "borrowed": [
+          {
+            "token_id": "2260fac5e5542a773aa44fbcfedf7c193bc2c599.factory.bridge.near",
+            "balance": "11280646529",
+            "shares": "10437076945",
+            "apr": "0.028005025307187913297638853"
+          }
+        ],
+        "farms": [
+          {
+            "farm_id": {
+              "Borrowed": "2260fac5e5542a773aa44fbcfedf7c193bc2c599.factory.bridge.near"
+            },
+            "rewards": [
+              {
+                "reward_token_id": "token.burrow.near",
+                "asset_farm_reward": {
+                  "reward_per_day": "7500000000000000000000",
+                  "booster_log_bases": {},
+                  "remaining_rewards": "0",
+                  "boosted_shares": "1226051711101946"
+                },
+                "boosted_shares": "10437076945",
+                "unclaimed_amount": "36963293644998"
+              }
+            ]
+          },
+          {
+            "farm_id": {
+              "Supplied": "wrap.near"
+            },
+            "rewards": [
+              {
+                "reward_token_id": "token.burrow.near",
+                "asset_farm_reward": {
+                  "reward_per_day": "100000000000000000000000",
+                  "booster_log_bases": {},
+                  "remaining_rewards": "0",
+                  "boosted_shares": "32024315880933560278820004935"
+                },
+                "boosted_shares": "30097835935920016757225",
+                "unclaimed_amount": "20358421795263670"
+              },
+              {
+                "reward_token_id": "wrap.near",
+                "asset_farm_reward": {
+                  "reward_per_day": "342857142900000010755112960",
+                  "booster_log_bases": {},
+                  "remaining_rewards": "0",
+                  "boosted_shares": "30870743365673004463928657813"
+                },
+                "boosted_shares": "79754761785743081378281",
+                "unclaimed_amount": "49243373486657532929"
+              }
+            ]
+          },
+          {
+            "farm_id": {
+              "Supplied": "meta-pool.near"
+            },
+            "rewards": [
+              {
+                "reward_token_id": "token.burrow.near",
+                "asset_farm_reward": {
+                  "reward_per_day": "13000000000000000000000",
+                  "booster_log_bases": {},
+                  "remaining_rewards": "0",
+                  "boosted_shares": "7648785740101773228153187353"
+                },
+                "boosted_shares": "85301950222772561022198",
+                "unclaimed_amount": "12268676967744895"
+              },
+              {
+                "reward_token_id": "meta-token.near",
+                "asset_farm_reward": {
+                  "reward_per_day": "50000000000000000000000000000",
+                  "booster_log_bases": {},
+                  "remaining_rewards": "0",
+                  "boosted_shares": "7762588300544273793163767304"
+                },
+                "boosted_shares": "85301950222772561022198",
+                "unclaimed_amount": "229947482835642141263561"
+              }
+            ]
+          },
+          {
+            "farm_id": {
+              "Supplied": "token.burrow.near"
+            },
+            "rewards": [
+              {
+                "reward_token_id": "usn",
+                "asset_farm_reward": {
+                  "reward_per_day": "200000000000000000000",
+                  "booster_log_bases": {},
+                  "remaining_rewards": "0",
+                  "boosted_shares": "2515767013469620148254098"
+                },
+                "boosted_shares": "67801636047000254",
+                "unclaimed_amount": "11481726067402"
+              },
+              {
+                "reward_token_id": "wrap.near",
+                "asset_farm_reward": {
+                  "reward_per_day": "67000000000000000000000000",
+                  "booster_log_bases": {},
+                  "remaining_rewards": "0",
+                  "boosted_shares": "13168084406549718538670422"
+                },
+                "boosted_shares": "67801636047000254",
+                "unclaimed_amount": "6727644453561126415"
+              },
+              {
+                "reward_token_id": "token.burrow.near",
+                "asset_farm_reward": {
+                  "reward_per_day": "12000000000000000000000",
+                  "booster_log_bases": {},
+                  "remaining_rewards": "0",
+                  "boosted_shares": "19005394549654910289740292"
+                },
+                "boosted_shares": "25586967752618446",
+                "unclaimed_amount": "1908118394479011"
+              }
+            ]
+          }
+        ],
+        "has_non_farmed_assets": false,
+        "booster_staking": {
+          "staked_booster_amount": "498471984708601900000",
+          "x_booster_amount": "1993887938834407600000",
+          "unlock_timestamp": "1663989583026009583"
+        },
+        "booster_stakings": {}
+      }
+    },
+    {
+      "contractId": "contract.main.burrow.near",
+      "method": "get_account",
+      "args": {
+        "account_id": "brianphan01.near"
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "account_id": "brianphan01.near",
+        "supplied": [
+          {
+            "token_id": "token.burrow.near",
+            "balance": "25586967752618446",
+            "shares": "25586967752618446",
+            "apr": "0.0"
+          },
+          {
+            "token_id": "meta-token.near",
+            "balance": "58310711571640570446780",
+            "shares": "58310711571640570446780",
+            "apr": "0.0"
+          },
+          {
+            "token_id": "meta-pool.near",
+            "balance": "85417729270095040480965",
+            "shares": "85301950222772561022198",
+            "apr": "0.00000028835616890591074715"
+          },
+          {
+            "token_id": "wrap.near",
+            "balance": "21241486979063752955066",
+            "shares": "20098147506854429451028",
+            "apr": "0.003347439860169867872481093"
+          }
+        ],
+        "collateral": [
+          {
+            "token_id": "wrap.near",
+            "balance": "10568548742527129718461",
+            "shares": "9999688429065587306197",
+            "apr": "0.003347439860169867872481093"
+          }
+        ],
+        "borrowed": [
+          {
+            "token_id": "2260fac5e5542a773aa44fbcfedf7c193bc2c599.factory.bridge.near",
+            "balance": "11280646529",
+            "shares": "10437076945",
+            "apr": "0.028005025307187913297638853"
+          }
+        ],
+        "farms": [
+          {
+            "farm_id": {
+              "Borrowed": "2260fac5e5542a773aa44fbcfedf7c193bc2c599.factory.bridge.near"
+            },
+            "rewards": [
+              {
+                "reward_token_id": "token.burrow.near",
+                "asset_farm_reward": {
+                  "reward_per_day": "7500000000000000000000",
+                  "booster_log_bases": {},
+                  "remaining_rewards": "0",
+                  "boosted_shares": "1226051711101946"
+                },
+                "boosted_shares": "10437076945",
+                "unclaimed_amount": "36963293644998"
+              }
+            ]
+          },
+          {
+            "farm_id": {
+              "Supplied": "wrap.near"
+            },
+            "rewards": [
+              {
+                "reward_token_id": "token.burrow.near",
+                "asset_farm_reward": {
+                  "reward_per_day": "100000000000000000000000",
+                  "booster_log_bases": {},
+                  "remaining_rewards": "0",
+                  "boosted_shares": "32024315880933560278820004935"
+                },
+                "boosted_shares": "30097835935920016757225",
+                "unclaimed_amount": "20358421795263670"
+              },
+              {
+                "reward_token_id": "wrap.near",
+                "asset_farm_reward": {
+                  "reward_per_day": "342857142900000010755112960",
+                  "booster_log_bases": {},
+                  "remaining_rewards": "0",
+                  "boosted_shares": "30870743365673004463928657813"
+                },
+                "boosted_shares": "79754761785743081378281",
+                "unclaimed_amount": "49243373486657532929"
+              }
+            ]
+          },
+          {
+            "farm_id": {
+              "Supplied": "meta-pool.near"
+            },
+            "rewards": [
+              {
+                "reward_token_id": "token.burrow.near",
+                "asset_farm_reward": {
+                  "reward_per_day": "13000000000000000000000",
+                  "booster_log_bases": {},
+                  "remaining_rewards": "0",
+                  "boosted_shares": "7648785740101773228153187353"
+                },
+                "boosted_shares": "85301950222772561022198",
+                "unclaimed_amount": "12268676967744895"
+              },
+              {
+                "reward_token_id": "meta-token.near",
+                "asset_farm_reward": {
+                  "reward_per_day": "50000000000000000000000000000",
+                  "booster_log_bases": {},
+                  "remaining_rewards": "0",
+                  "boosted_shares": "7762588300544273793163767304"
+                },
+                "boosted_shares": "85301950222772561022198",
+                "unclaimed_amount": "229947482835642141263561"
+              }
+            ]
+          },
+          {
+            "farm_id": {
+              "Supplied": "token.burrow.near"
+            },
+            "rewards": [
+              {
+                "reward_token_id": "usn",
+                "asset_farm_reward": {
+                  "reward_per_day": "200000000000000000000",
+                  "booster_log_bases": {},
+                  "remaining_rewards": "0",
+                  "boosted_shares": "2515767013469620148254098"
+                },
+                "boosted_shares": "67801636047000254",
+                "unclaimed_amount": "11481726067402"
+              },
+              {
+                "reward_token_id": "wrap.near",
+                "asset_farm_reward": {
+                  "reward_per_day": "67000000000000000000000000",
+                  "booster_log_bases": {},
+                  "remaining_rewards": "0",
+                  "boosted_shares": "13168084406549718538670422"
+                },
+                "boosted_shares": "67801636047000254",
+                "unclaimed_amount": "6727644453561126415"
+              },
+              {
+                "reward_token_id": "token.burrow.near",
+                "asset_farm_reward": {
+                  "reward_per_day": "12000000000000000000000",
+                  "booster_log_bases": {},
+                  "remaining_rewards": "0",
+                  "boosted_shares": "19005394549654910289740292"
+                },
+                "boosted_shares": "25586967752618446",
+                "unclaimed_amount": "1908118394479011"
+              }
+            ]
+          }
+        ],
+        "has_non_farmed_assets": false,
+        "booster_staking": {
+          "staked_booster_amount": "498471984708601900000",
+          "x_booster_amount": "1993887938834407600000",
+          "unlock_timestamp": "1663989583026009583"
+        },
+        "booster_stakings": {}
+      }
+    },
+    {
+      "contractId": "aurora",
+      "method": "ft_metadata",
+      "args": {},
+      "error": {
+        "jsonrpc": "2.0",
+        "result": {
+          "block_hash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+          "block_height": 223245720,
+          "error": "wasm execution failed with error: HostError(ProhibitedInView { method_name: \"used_gas\" })",
+          "logs": []
+        },
+        "id": "fixture"
+      }
+    },
+    {
+      "contractId": "aggregate-oracle.near",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "ff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace",
+        "age": 60
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "price": "223995625573",
+        "conf": "204874427",
+        "expo": -8,
+        "publish_time": 1793927595
+      }
+    },
+    {
+      "contractId": "6b175474e89094c44da98b954eedeac495271d0f.factory.bridge.near",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Dai Stablecoin",
+        "symbol": "DAI",
+        "icon": "data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle fill='%23F4B731' fill-rule='nonzero' cx='16' cy='16' r='16'/%3E%3Cpath d='M9.277 8h6.552c3.985 0 7.006 2.116 8.13 5.194H26v1.861h-1.611c.031.294.047.594.047.898v.046c0 .342-.02.68-.06 1.01H26v1.86h-2.08C22.767 21.905 19.77 24 15.83 24H9.277v-5.131H7v-1.86h2.277v-1.954H7v-1.86h2.277V8zm1.831 10.869v3.462h4.72c2.914 0 5.078-1.387 6.085-3.462H11.108zm11.366-1.86H11.108v-1.954h11.37c.041.307.063.622.063.944v.045c0 .329-.023.65-.067.964zM15.83 9.665c2.926 0 5.097 1.424 6.098 3.528h-10.82V9.666h4.72z' fill='%23FFF'/%3E%3C/g%3E%3C/svg%3E",
+        "reference": "",
+        "reference_hash": "",
+        "decimals": 18
+      }
+    },
+    {
+      "contractId": "aggregate-oracle.near",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "b0948a5e5313200c632b51bb5ca32f6de0d36e9950a942d19751e833f70dabfd",
+        "age": 60
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "price": "99981000",
+        "conf": "229393",
+        "expo": -8,
+        "publish_time": 1793927595
+      }
+    },
+    {
+      "contractId": "dac17f958d2ee523a2206206994597c13d831ec7.factory.bridge.near",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Tether USD",
+        "symbol": "USDT.e",
+        "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle cx='16' cy='16' r='16' fill='%2326A17B'/%3E%3Cpath fill='%23FFF' d='M17.922 17.383v-.002c-.11.008-.677.042-1.942.042-1.01 0-1.721-.03-1.971-.042v.003c-3.888-.171-6.79-.848-6.79-1.658 0-.809 2.902-1.486 6.79-1.66v2.644c.254.018.982.061 1.988.061 1.207 0 1.812-.05 1.925-.06v-2.643c3.88.173 6.775.85 6.775 1.658 0 .81-2.895 1.485-6.775 1.657m0-3.59v-2.366h5.414V7.819H8.595v3.608h5.414v2.365c-4.4.202-7.709 1.074-7.709 2.118 0 1.044 3.309 1.915 7.709 2.118v7.582h3.913v-7.584c4.393-.202 7.694-1.073 7.694-2.116 0-1.043-3.301-1.914-7.694-2.117'/%3E%3C/g%3E%3C/svg%3E",
+        "reference": "",
+        "reference_hash": "",
+        "decimals": 6
+      }
+    },
+    {
+      "contractId": "aggregate-oracle.near",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "2b89b9dc8fdf9f34709a5b106b472f0f39bb6ca9ce04b0fd7f2e971688e2e53b",
+        "age": 60
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "price": "99849300",
+        "conf": "862",
+        "expo": -8,
+        "publish_time": 1793927595
+      }
+    },
+    {
+      "contractId": "a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.factory.bridge.near",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Bridged USDC",
+        "symbol": "USDC.e",
+        "icon": "data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Ccircle cx='16' cy='16' r='16' fill='%232775C9'/%3E%3Cpath d='M15.75 27.5C9.26 27.5 4 22.24 4 15.75S9.26 4 15.75 4 27.5 9.26 27.5 15.75A11.75 11.75 0 0115.75 27.5zm-.7-16.11a2.58 2.58 0 00-2.45 2.47c0 1.21.74 2 2.31 2.33l1.1.26c1.07.25 1.51.61 1.51 1.22s-.77 1.21-1.77 1.21a1.9 1.9 0 01-1.8-.91.68.68 0 00-.61-.39h-.59a.35.35 0 00-.28.41 2.73 2.73 0 002.61 2.08v.84a.705.705 0 001.41 0v-.85a2.62 2.62 0 002.59-2.58c0-1.27-.73-2-2.46-2.37l-1-.22c-1-.25-1.47-.58-1.47-1.14 0-.56.6-1.18 1.6-1.18a1.64 1.64 0 011.59.81.8.8 0 00.72.46h.47a.42.42 0 00.31-.5 2.65 2.65 0 00-2.38-2v-.69a.705.705 0 00-1.41 0v.74zm-8.11 4.36a8.79 8.79 0 006 8.33h.14a.45.45 0 00.45-.45v-.21a.94.94 0 00-.58-.87 7.36 7.36 0 010-13.65.93.93 0 00.58-.86v-.23a.42.42 0 00-.56-.4 8.79 8.79 0 00-6.03 8.34zm17.62 0a8.79 8.79 0 00-6-8.32h-.15a.47.47 0 00-.47.47v.15a1 1 0 00.61.9 7.36 7.36 0 010 13.64 1 1 0 00-.6.89v.17a.47.47 0 00.62.44 8.79 8.79 0 005.99-8.34z' fill='%23FFF'/%3E%3C/g%3E%3C/svg%3E",
+        "reference": "",
+        "reference_hash": "",
+        "decimals": 6
+      }
+    },
+    {
+      "contractId": "aggregate-oracle.near",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "eaa020c61cc479712813461ce153894a96a6c00b21ed0cfc2798d1f9a9e9c94a",
+        "age": 60
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "price": "99975366",
+        "conf": "149634",
+        "expo": -8,
+        "publish_time": 1793927595
+      }
+    },
+    {
+      "contractId": "wrap.near",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Wrapped NEAR fungible token",
+        "symbol": "wNEAR",
+        "icon": null,
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 24
+      }
+    },
+    {
+      "contractId": "aggregate-oracle.near",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "c415de8d2eba7db216527dff4b60e8f3a5311c740dadb233e13e12547e226750",
+        "age": 60
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "price": "373072017",
+        "conf": "317983",
+        "expo": -8,
+        "publish_time": 1793927595
+      }
+    },
+    {
+      "contractId": "meta-pool.near",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Staked NEAR",
+        "symbol": "STNEAR",
+        "icon": "data:image/svg+xml,%3csvg width='96' height='96' viewBox='0 0 96 96' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='96' height='96' rx='48' fill='white'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M48.0006 20L41.2575 26.7431L48.0006 33.4862L54.7437 26.7431L48.0006 20ZM37.281 30.7188L30.7144 37.2853L47.9998 54.5707L65.2851 37.2853L58.7186 30.7188L47.9998 41.4376L37.281 30.7188ZM26.7384 41.261L19.9953 48.0041L47.9995 76.0083L76.0037 48.0041L69.2606 41.2611L47.9995 62.5221L26.7384 41.261Z' fill='%23231B51'/%3e%3c/svg%3e",
+        "reference": "https://metapool.app",
+        "reference_hash": null,
+        "decimals": 24
+      }
+    },
+    {
+      "contractId": "aggregate-oracle.near",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "c415de8d2eba7db216527dff4b60e8f3a5311c740dadb233e13e12547e226750",
+        "age": 60
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "price": "373072017",
+        "conf": "317983",
+        "expo": -8,
+        "publish_time": 1793927595
+      }
+    },
+    {
+      "contractId": "meta-pool.near",
+      "method": "get_st_near_price",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": "1513866855224539974665476"
+    },
+    {
+      "contractId": "2260fac5e5542a773aa44fbcfedf7c193bc2c599.factory.bridge.near",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "icon": "data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Ccircle fill='%23201A2D' cx='16' cy='16' r='16'/%3E%3Cg fill='%23FFF'%3E%3Cpath d='M22.818 9.586l-.6.6a8.494 8.494 0 010 11.464l.6.6a9.352 9.352 0 000-12.678v.014zM10.2 9.638a8.494 8.494 0 0111.464 0l.6-.6a9.352 9.352 0 00-12.678 0l.614.6zm-.562 12.018a8.494 8.494 0 010-11.458l-.6-.6a9.352 9.352 0 000 12.678l.6-.62zm12.018.554a8.494 8.494 0 01-11.464 0l-.6.6a9.352 9.352 0 0012.678 0l-.614-.6zm-1.942-8.286c-.12-1.252-1.2-1.672-2.566-1.8V10.4h-1.056v1.692h-.844V10.4H14.2v1.736h-2.142v1.13s.78-.014.768 0a.546.546 0 01.6.464v4.752a.37.37 0 01-.128.258.366.366 0 01-.272.092c.014.012-.768 0-.768 0l-.2 1.262h2.122v1.764h1.056V20.12h.844v1.73h1.058v-1.744c1.784-.108 3.028-.548 3.184-2.218.126-1.344-.506-1.944-1.516-2.186.614-.302.994-.862.908-1.778zm-1.48 3.756c0 1.312-2.248 1.162-2.964 1.162v-2.328c.716.002 2.964-.204 2.964 1.166zm-.49-3.28c0 1.2-1.876 1.054-2.472 1.054v-2.116c.596 0 2.472-.188 2.472 1.062z'/%3E%3Cpath d='M15.924 26.852C9.89 26.851 5 21.959 5 15.925 5 9.892 9.892 5 15.925 5c6.034 0 10.926 4.89 10.927 10.924a10.926 10.926 0 01-10.928 10.928zm0-21c-5.559.004-10.062 4.513-10.06 10.072.002 5.559 4.51 10.064 10.068 10.064 5.559 0 10.066-4.505 10.068-10.064A10.068 10.068 0 0015.924 5.852z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E",
+        "reference": "",
+        "reference_hash": "",
+        "decimals": 8
+      }
+    },
+    {
+      "contractId": "aggregate-oracle.near",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "c9d8b075a5c69303365ae23633d4e085199bf5c520a3b90fed1322a0342ffc33",
+        "age": 60
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "price": "7595680633169",
+        "conf": "12351033498",
+        "expo": -8,
+        "publish_time": 1793927595
+      }
+    },
+    {
+      "contractId": "aaaaaa20d9e0e2461697782ef11675f668207961.factory.bridge.near",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Aurora",
+        "symbol": "AURORA",
+        "icon": "data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 288 288' style='enable-background:new 0 0 288 288;' xml:space='preserve'%3E %3Cstyle type='text/css'%3E .st0%7Bfill:%2370D44B;%7D .st1%7Bfill:%23FFFFFF;%7D %3C/style%3E %3Cpath class='st0' d='M144,0L144,0c79.5,0,144,64.5,144,144v0c0,79.5-64.5,144-144,144h0C64.5,288,0,223.5,0,144v0 C0,64.5,64.5,0,144,0z'/%3E %3Cpath class='st1' d='M144,58.8c7.6,0,14.5,4.3,17.9,11.1l56.2,112.5c4.9,9.9,0.9,21.9-9,26.8c-2.8,1.4-5.8,2.1-8.9,2.1H87.8 c-11,0-20-9-20-20c0-3.1,0.7-6.2,2.1-8.9l56.2-112.5C129.5,63,136.4,58.7,144,58.8 M144,45c-12.8,0-24.5,7.2-30.2,18.7L57.6,176.2 c-8.3,16.7-1.6,36.9,15.1,45.3c4.7,2.3,9.9,3.6,15.1,3.6h112.5c18.6,0,33.8-15.1,33.8-33.7c0-5.2-1.2-10.4-3.6-15.1L174.2,63.7 C168.5,52.2,156.8,45,144,45z'/%3E %3C/svg%3E",
+        "reference": "",
+        "reference_hash": "",
+        "decimals": 18
+      }
+    },
+    {
+      "contractId": "aggregate-oracle.near",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "2f7c4f738d498585065a4b87b637069ec99474597da7f0ca349ba8ac3ba9cac5",
+        "age": 60
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "price": "4396168",
+        "conf": "11371",
+        "expo": -8,
+        "publish_time": 1793927595
+      }
+    },
+    {
+      "contractId": "linear-protocol.near",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "LiNEAR",
+        "symbol": "LINEAR",
+        "icon": "data:image/svg+xml,%3Csvg width='40' height='40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M30.74 28.78c.21-.36.32-.78.32-1.21v-6.33c0-.24-.06-.46-.17-.66-.12-.21-.28-.38-.48-.49l-16.86-9.77c-.35-.2-.73-.31-1.13-.32-.64 0-1.24.26-1.69.72-.45.45-.7 1.07-.71 1.71v6.39c0 .24.06.47.18.67.11.21.28.37.48.48l16.82 9.71c.36.22.77.32 1.19.32.41 0 .82-.12 1.19-.33.36-.21.66-.52.86-.89zm.32-16.27c0-.42-.1-.84-.29-1.21-.2-.38-.49-.7-.85-.93-.36-.22-.78-.34-1.21-.34-.42 0-.84.12-1.21.34l-4.97 2.81c-.04.02-.08.07-.1.12-.03.04-.04.1-.04.14 0 .06.01.11.04.16.02.04.06.08.1.1l8.05 4.62c.05.02.1.04.15.04.05 0 .1-.02.15-.05.04-.02.08-.06.11-.11.02-.04.04-.1.03-.15l.04-5.54zM10.05 27.5c-.01.43.08.86.28 1.23.2.38.49.7.85.93.36.22.78.34 1.2.34.42 0 .83-.12 1.2-.34l4.92-2.85c.04-.02.08-.06.1-.11.03-.04.05-.1.05-.15 0-.05-.02-.11-.05-.15-.02-.05-.06-.09-.1-.12l-8.05-4.6c-.05-.03-.09-.04-.15-.04-.05 0-.1.01-.15.04-.05.02-.08.07-.11.12-.02.04-.04.09-.04.14l.05 5.56z' fill='url(%23paint0_linear_186_370)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_186_370' x1='11.135' y1='11.152' x2='30.145' y2='30.457' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%231BB3CC'/%3E%3Cstop offset='1' stop-color='%23824ACC'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E",
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 24
+      }
+    },
+    {
+      "contractId": "aggregate-oracle.near",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "c415de8d2eba7db216527dff4b60e8f3a5311c740dadb233e13e12547e226750",
+        "age": 60
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "price": "373072017",
+        "conf": "317983",
+        "expo": -8,
+        "publish_time": 1793927595
+      }
+    },
+    {
+      "contractId": "linear-protocol.near",
+      "method": "ft_price",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": "1429843479478211668058682"
+    },
+    {
+      "contractId": "4691937a7508860f876c9c0a2a617e7d9e945d4b.factory.bridge.near",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Wootrade Network",
+        "symbol": "WOO",
+        "icon": "data:image/svg+xml,%3Csvg width='125' height='83' viewBox='0 0 125 83' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M102.422 0H122.958L113.203 30.9433H92.9243L102.422 0ZM75.982 29.4048L86.0788 53.3388L89.8436 41.0299H109.951L98.5713 78.0422C97.6301 80.9485 94.9776 82.9145 91.8972 82.9145H80.4314C77.6078 82.9145 75.0408 81.2049 73.9285 78.5551L61.2648 47.8682L48.8578 78.5551C47.831 81.2904 45.2641 83 42.3549 83H30.718C27.6376 83 24.9851 80.9485 24.0439 78.0422L0 5.85842e-05H20.1934L36.2797 53.3388L46.8898 29.3193C49.2857 23.3358 55.0185 19.4038 61.4359 19.4038C67.8533 19.4038 73.6718 23.3358 75.982 29.4048Z' fill='%2320252F'/%3E%3C/svg%3E",
+        "reference": "",
+        "reference_hash": "",
+        "decimals": 18
+      }
+    },
+    {
+      "contractId": "aggregate-oracle.near",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "b82449fd728133488d2d41131cffe763f9c1693b73c544d9ef6aaa371060dd25",
+        "age": 60
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": null
+    },
+    {
+      "contractId": "v2-nearx.stader-labs.near",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "NearX",
+        "symbol": "NearX",
+        "icon": "data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12ZM17.1421 21.3847L21.3848 17.1421L19.3669 15.1243C18.5576 17.0302 17.0303 18.5576 15.1243 19.3669L17.1421 21.3847ZM9.4329 19.5792C7.45318 18.9089 5.82112 17.4847 4.87847 15.6484L3.24263 17.2842L7.48527 21.5269L9.4329 19.5792ZM4.63307 8.87568C5.4424 6.96973 6.96977 5.44237 8.87573 4.63305L7.24263 2.99995L2.99999 7.24259L4.63307 8.87568ZM15.6484 4.87847L17.3848 3.14209L21.6274 7.38473L19.5792 9.4329C18.9089 7.45318 17.4847 5.82112 15.6484 4.87847Z' fill='%232FA8AF'/%3E%3Cpath d='M8.00119 11.9921C8.00119 11.0268 8.00119 10.0615 8.00119 9.09612C8.00119 8.50505 8.16497 8.1743 8.56285 8.05781C8.97778 7.93628 9.40619 7.97917 9.79565 8.45228C11.3533 10.3447 12.9343 12.218 14.5092 14.0959C14.5692 14.1676 14.6117 14.3122 14.734 14.2626C14.8496 14.2157 14.7858 14.0805 14.786 13.9878C14.7904 12.6326 14.7898 11.2774 14.7868 9.92226C14.7868 9.83668 14.838 9.7162 14.7271 9.67372C14.6401 9.64029 14.5824 9.74185 14.522 9.79358C14.0492 10.1981 13.5804 10.6073 13.1088 11.0133C13.0208 11.089 12.9332 11.2118 12.8002 11.1012C12.6657 10.9894 12.7696 10.8872 12.8364 10.7881C13.3547 10.0186 13.8728 9.24898 14.3909 8.47919C14.6656 8.07085 15.0079 7.92282 15.4056 8.04141C15.786 8.15475 15.9986 8.48592 15.9992 8.97668C16.0007 10.0905 15.9996 11.2045 15.9996 12.3183C15.9996 13.2094 16.0003 14.1005 15.9994 14.9916C15.999 15.4826 15.8137 15.798 15.4512 15.9324C15.0256 16.0901 14.5767 15.9683 14.2734 15.6058C12.6823 13.705 11.0924 11.8029 9.50198 9.90144C9.46029 9.85161 9.42303 9.7961 9.37377 9.75489C9.28998 9.68487 9.21967 9.68108 9.21314 9.81797C9.20999 9.88273 9.21188 9.94791 9.21188 10.0129C9.21188 11.3496 9.21062 12.6862 9.2142 14.0227C9.21441 14.1186 9.15609 14.2557 9.26114 14.3038C9.38093 14.3587 9.45061 14.2178 9.52998 14.1503C9.98259 13.7651 10.4291 13.3728 10.8805 12.9859C10.9729 12.9066 11.0626 12.7651 11.208 12.8973C11.3402 13.0176 11.2213 13.1196 11.159 13.2127C10.6323 13.9989 10.1032 14.7837 9.57145 15.5663C9.32788 15.9248 8.9881 16.056 8.61085 15.9488C8.23739 15.8428 8.00498 15.5246 8.00287 15.0827C7.99761 14.0523 8.00119 13.022 8.00119 11.9917V11.9921Z' fill='white'/%3E%3C/svg%3E%0A",
+        "reference": "https://near.staderlabs.com",
+        "reference_hash": null,
+        "decimals": 24
+      }
+    },
+    {
+      "contractId": "aggregate-oracle.near",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "c415de8d2eba7db216527dff4b60e8f3a5311c740dadb233e13e12547e226750",
+        "age": 60
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "price": "373072017",
+        "conf": "317983",
+        "expo": -8,
+        "publish_time": 1793927595
+      }
+    },
+    {
+      "contractId": "v2-nearx.stader-labs.near",
+      "method": "get_nearx_price",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": "1836624380879012817590929"
+    },
+    {
+      "contractId": "usdt.tether-token.near",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Tether USD",
+        "symbol": "USDt",
+        "icon": "data:image/svg+xml,%3Csvg width='111' height='90' viewBox='0 0 111 90' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M24.4825 0.862305H88.0496C89.5663 0.862305 90.9675 1.64827 91.7239 2.92338L110.244 34.1419C111.204 35.7609 110.919 37.8043 109.549 39.1171L58.5729 87.9703C56.9216 89.5528 54.2652 89.5528 52.6139 87.9703L1.70699 39.1831C0.305262 37.8398 0.0427812 35.7367 1.07354 34.1077L20.8696 2.82322C21.6406 1.60483 23.0087 0.862305 24.4825 0.862305ZM79.8419 14.8003V23.5597H61.7343V29.6329C74.4518 30.2819 83.9934 32.9475 84.0642 36.1425L84.0638 42.803C83.993 45.998 74.4518 48.6635 61.7343 49.3125V64.2168H49.7105V49.3125C36.9929 48.6635 27.4513 45.998 27.3805 42.803L27.381 36.1425C27.4517 32.9475 36.9929 30.2819 49.7105 29.6329V23.5597H31.6028V14.8003H79.8419ZM55.7224 44.7367C69.2943 44.7367 80.6382 42.4827 83.4143 39.4727C81.0601 36.9202 72.5448 34.9114 61.7343 34.3597V40.7183C59.7966 40.8172 57.7852 40.8693 55.7224 40.8693C53.6595 40.8693 51.6481 40.8172 49.7105 40.7183V34.3597C38.8999 34.9114 30.3846 36.9202 28.0304 39.4727C30.8066 42.4827 42.1504 44.7367 55.7224 44.7367Z' fill='%23009393'/%3E%3C/svg%3E",
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 6
+      }
+    },
+    {
+      "contractId": "aggregate-oracle.near",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "2b89b9dc8fdf9f34709a5b106b472f0f39bb6ca9ce04b0fd7f2e971688e2e53b",
+        "age": 60
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "price": "99849300",
+        "conf": "862",
+        "expo": -8,
+        "publish_time": 1793927595
+      }
+    },
+    {
+      "contractId": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "USDC",
+        "symbol": "USDC",
+        "icon": "data:image/svg+xml,%3C%3Fxml version=%221.0%22 encoding=%22utf-8%22%3F%3E%3C!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version=%221.1%22 id=%22Layer_1%22 xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 x=%220px%22 y=%220px%22 viewBox=%220 0 256 256%22 style=%22enable-background:new 0 0 256 256;%22 xml:space=%22preserve%22%3E%3Cstyle type=%22text/css%22%3E .st0%7Bfill:%232775CA;%7D .st1%7Bfill:%23FFFFFF;%7D%0A%3C/style%3E%3Ccircle class=%22st0%22 cx=%22128%22 cy=%22128%22 r=%22128%22/%3E%3Cpath class=%22st1%22 d=%22M104,217c0,3-2.4,4.7-5.2,3.8C60,208.4,32,172.2,32,129.3c0-42.8,28-79.1,66.8-91.5c2.9-0.9,5.2,0.8,5.2,3.8 v7.5c0,2-1.5,4.3-3.4,5C69.9,65.4,48,94.9,48,129.3c0,34.5,21.9,63.9,52.6,75.1c1.9,0.7,3.4,3,3.4,5V217z%22/%3E%3Cpath class=%22st1%22 d=%22M136,189.3c0,2.2-1.8,4-4,4h-8c-2.2,0-4-1.8-4-4v-12.6c-17.5-2.4-26-12.1-28.3-25.5c-0.4-2.3,1.4-4.3,3.7-4.3 h9.1c1.9,0,3.5,1.4,3.9,3.2c1.7,7.9,6.3,14,20.3,14c10.3,0,17.7-5.8,17.7-14.4c0-8.6-4.3-11.9-19.5-14.4c-22.4-3-33-9.8-33-27.3 c0-13.5,10.3-24.1,26.1-26.3V69.3c0-2.2,1.8-4,4-4h8c2.2,0,4,1.8,4,4v12.7c12.9,2.3,21.1,9.6,23.8,21.8c0.5,2.3-1.3,4.4-3.7,4.4 h-8.4c-1.8,0-3.3-1.2-3.8-2.9c-2.3-7.7-7.8-11.1-17.4-11.1c-10.6,0-16.1,5.1-16.1,12.3c0,7.6,3.1,11.4,19.4,13.7 c22,3,33.4,9.3,33.4,28c0,14.2-10.6,25.7-27.1,28.3V189.3z%22/%3E%3Cpath class=%22st1%22 d=%22M157.2,220.8c-2.9,0.9-5.2-0.8-5.2-3.8v-7.5c0-2.2,1.3-4.3,3.4-5c30.6-11.2,52.6-40.7,52.6-75.1 c0-34.5-21.9-63.9-52.6-75.1c-1.9-0.7-3.4-3-3.4-5v-7.5c0-3,2.4-4.7,5.2-3.8C196,50.2,224,86.5,224,129.3 C224,172.2,196,208.4,157.2,220.8z%22/%3E%3C/svg%3E%0A",
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 6
+      }
+    },
+    {
+      "contractId": "aggregate-oracle.near",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "eaa020c61cc479712813461ce153894a96a6c00b21ed0cfc2798d1f9a9e9c94a",
+        "age": 60
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "price": "99975366",
+        "conf": "149634",
+        "expo": -8,
+        "publish_time": 1793927595
+      }
+    },
+    {
+      "contractId": "853d955acef822db058eb8505911ed77f175b99e.factory.bridge.near",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Frax",
+        "symbol": "FRAX",
+        "icon": "data:image/svg+xml,%3Csvg clip-rule='evenodd' fill-rule='evenodd' stroke-miterlimit='11.3386' viewBox='0 0 560 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='matrix(.527056 0 0 .527056 285.534 9.78566)'%3E%3Ccircle cx='-10.5' cy='360.9' r='284.6' stroke='%23000' stroke-width='1.24'/%3E%3Cpath d='m-167.5 202.6c-12 12.6-21.9 23.2-22 23.4-.1.3 10.7 10.9 24 23.5 13.3 12.7 24.9 23.8 25.7 24.5l1.5 1.4-2.7 4.5c-23.7 39.2-28.6 86.4-13.7 129.8 2.8 8.2 7.6 18.7 11.7 25.6 2 3.4 2.9 5.6 2.7 6s-12.3 13.2-26.9 28.5c-14.6 15.2-26.5 27.9-26.7 28.1-.1.3 40.8 39.8 44.7 43l1.5 1.3 23.1-24.1c12.7-13.3 24.6-25.8 26.4-27.7l3.4-3.4 3.2 2c16.3 10.4 35.4 17.6 56.5 21.4 10.6 1.9 30.8 2.4 42.1 1 21.8-2.5 43.4-9.8 61.1-20.5l4.6-2.8 4.9 4.8c10.7 10.4 50.7 48.4 51.1 48.6s44.3-45.7 44.2-46.3c-.1-.3-30.2-29.2-48.6-46.5l-6.1-5.8 2.8-4.6c23.5-39.1 28.4-86.5 13.2-130.2-2.2-6.4-8.9-20.8-12.8-27.4l-1.9-3.3 25.7-26.9c14.1-14.7 25.6-27 25.5-27.3-.4-1-45.4-43.5-46-43.5-.4 0-11.7 11.5-25.2 25.7-13.5 14.1-24.7 25.7-25 25.8-.2.1-1.5-.5-2.7-1.4-3.4-2.3-12-7-16.8-9.2-14.6-6.7-28.2-10.8-44-13.1-8.2-1.2-32.8-1.4-40.4-.3-18.2 2.6-33.1 7.1-48.3 14.7-4.4 2.1-9.5 4.9-11.5 6.1l-3.6 2.2-4.1-4c-2.2-2.2-12.2-11.6-22.1-21.1-9.9-9.4-20-19-22.4-21.4l-4.4-4.3zm167.9 65.2c15.9 1.9 30.1 7.3 43.2 16.5 6.7 4.7 16.7 14.7 21.4 21.4 26.7 37.8 21.6 89.2-12 120.7-28.7 26.8-70.2 32.8-105.1 15-25.2-12.9-43-36.5-48.7-64.8-1.8-9-1.8-25.8 0-34.7 1.7-8.8 4-15.1 8.3-23.9 17.2-34.6 54.5-54.8 92.9-50.2z' fill='%23fff' fill-rule='nonzero'/%3E%3C/g%3E%3C/svg%3E",
+        "reference": "",
+        "reference_hash": "",
+        "decimals": 18
+      }
+    },
+    {
+      "contractId": "aggregate-oracle.near",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "7c53208632935ba5122c3cf65a0f4b3e72ba4955b49ad6ba0acf3d9ba405aef3",
+        "age": 60
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "price": "99061623",
+        "conf": "113494",
+        "expo": -8,
+        "publish_time": 1793927595
+      }
+    },
+    {
+      "contractId": "a663b02cf0a4b149d2ad41910cb81e23e1c41c32.factory.bridge.near",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Staked FRAX",
+        "symbol": "sFRAX",
+        "icon": null,
+        "reference": "",
+        "reference_hash": "",
+        "decimals": 18
+      }
+    },
+    {
+      "contractId": "nbtc.bridge.near",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Near WBTC",
+        "symbol": "NBTC",
+        "icon": "data:image/svg+xml,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20clip-path%3D%22url(%23clip0_2351_779)%22%3E%3Cpath%20d%3D%22M16%2032C24.8366%2032%2032%2024.8366%2032%2016C32%207.16344%2024.8366%200%2016%200C7.16344%200%200%207.16344%200%2016C0%2024.8366%207.16344%2032%2016%2032Z%22%20fill%3D%22%2300E99F%22%2F%3E%3Cpath%20d%3D%22M16.0006%2028.2858C22.7858%2028.2858%2028.2863%2022.7853%2028.2863%2016.0001C28.2863%209.21486%2022.7858%203.71436%2016.0006%203.71436C9.21535%203.71436%203.71484%209.21486%203.71484%2016.0001C3.71484%2022.7853%209.21535%2028.2858%2016.0006%2028.2858Z%22%20stroke%3D%22black%22%2F%3E%3Cpath%20d%3D%22M27.1412%2016C27.1412%2022.1541%2022.1524%2027.1429%2015.9983%2027.1429C9.84427%2027.1429%204.85547%2022.1541%204.85547%2016C4.85547%209.84598%209.84427%204.85718%2015.9983%204.85718C22.1524%204.85718%2027.1412%209.84598%2027.1412%2016Z%22%20stroke%3D%22black%22%20stroke-width%3D%220.5%22%2F%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M16.2167%2011.1743C15.9198%2011.1643%2015.6095%2011.1622%2015.2868%2011.1668V9.32056H13.8907V11.2217C13.1583%2011.2659%2012.3792%2011.3332%2011.5625%2011.4149V12.811H12.9586V18.8607H11.7952V20.4895H13.8893V22.5836H15.2854V20.4895H16.2161V22.5836H17.3795V20.4895C18.4654%2020.4119%2020.6836%2019.7915%2020.8698%2017.93C21.0559%2016.0686%2019.7064%2015.6032%2019.0083%2015.6032C19.5512%2015.3705%2020.544%2014.5328%2020.1717%2013.0436C19.9215%2012.043%2019.0072%2011.5204%2017.6128%2011.2984V9.32164H16.2167V11.1743ZM18.0737%2013.9723C18.0737%2012.8554%2016.2122%2012.7313%2015.2815%2012.8088V15.1356C16.2122%2015.2132%2018.0737%2015.0891%2018.0737%2013.9723ZM15.2826%2016.5322V18.8591C16.2133%2018.9366%2018.3075%2018.859%2018.3075%2017.6956C18.3075%2016.2994%2016.2133%2016.4547%2015.2826%2016.5322Z%22%20fill%3D%22black%22%2F%3E%3C%2Fg%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0_2351_779%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22white%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3C%2Fsvg%3E",
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 8
+      }
+    },
+    {
+      "contractId": "aggregate-oracle.near",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "e62df6c8b4a85fe1a67db44dc12de5db330f7ac66b72dc658afedf0f4a415b43",
+        "age": 60
+      },
+      "blockHeight": 223245720,
+      "blockHash": "9upbo7URSwA6gqnr5pQVmQjYUF2arAC7EVSrGNkxdSvs",
+      "data": {
+        "price": "7614573019291",
+        "conf": "9103980709",
+        "expo": -8,
+        "publish_time": 1793927595
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@mrfund/api",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/main.ts",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@mrfund/server": "workspace:*",
+    "tsx": "4.23.15"
+  }
+}

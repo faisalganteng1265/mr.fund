@@ -1,0 +1,5 @@
+Generated with the built-in imagegen tool, 2026-11-07.
+
+Create a single background scenery texture for the view through a tall window in a tasteful 3D office game. Portrait composition, 3:4 aspect ratio. View of a sunlit peaceful garden outside at human eye level: leafy mature green trees, warm morning sunlight filtering through the leaves, small patches of lawn and shrubs, distant soft blue sky visible through tree canopy. Polished high quality 3D animated-film environment with natural details and restrained cheerful colors, crisp foreground foliage and clear depth. The tree canopy fills the top and side areas, open airy garden depth in middle. This is ONLY the exterior landscape, edge-to-edge outdoor scenery. No room, no window, no window frame, no glass reflections, no furniture, no people, no text, no logos. Avoid heavy blur or fog. The image will be applied as a texture behind real 3D window frame geometry.
+
+Delivered as WebP, 768 × 1024, quality 80, to reduce transfer size.

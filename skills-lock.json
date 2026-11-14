@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "skills": {
+    "codebase-design": {
+      "source": "mattpocock/skills",
+      "ref": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/codebase-design/SKILL.md",
+      "computedHash": "417e3ea96ab3fbe2b7a4279ce3e59202fb7106ad688c12f2d577c9219803de8d",
+      "installMode": "copy"
+    },
+    "motion": {
+      "source": "motiondivision/ai-kit",
+      "ref": "1e424943582cbbdb6e3f410687e39f96451447bb",
+      "sourceType": "github",
+      "skillPath": "plugins/motion/skills/motion/SKILL.md",
+      "computedHash": "524a2737c7edd60f949cdf51d254f0e28a13439af44caaf6bba44236c4d92ee6",
+      "installMode": "copy"
+    },
+    "near-ai-cloud": {
+      "source": "near/agent-skills",
+      "ref": "cb32b6af195e636c1e9c2efe2ea75a6d85b6b67b",
+      "sourceType": "github",
+      "skillPath": "skills/near-ai-cloud/SKILL.md",
+      "computedHash": "00c15c64c1a5245a16b192c17fe5e61475b69d27355d5d310075101942f72e80",
+      "installMode": "copy"
+    },
+    "near-api-js": {
+      "source": "near/agent-skills",
+      "ref": "cb32b6af195e636c1e9c2efe2ea75a6d85b6b67b",
+      "sourceType": "github",
+      "skillPath": "skills/near-api-js/SKILL.md",
+      "computedHash": "479324685943b82645f325ee81f66ea3a10ba9eb5a9f33d618e9550b4061b1d0",
+      "installMode": "copy"
+    },
+    "near-contract-audit": {
+      "source": "near/agent-skills",
+      "ref": "cb32b6af195e636c1e9c2efe2ea75a6d85b6b67b",
+      "sourceType": "github",
+      "skillPath": "skills/near-contract-audit/SKILL.md",
+      "computedHash": "7947acbb8ade8d99edab6a97d6c0604af980d2093f63668ad3790409d2c3481f",
+      "installMode": "copy"
+    },
+    "near-dapp": {
+      "source": "near/agent-skills",
+      "ref": "cb32b6af195e636c1e9c2efe2ea75a6d85b6b67b",
+      "sourceType": "github",
+      "skillPath": "skills/near-dapp/SKILL.md",
+      "computedHash": "c347367ff7a231dee066b4ed0e6caedc20e147cd10c076fe7d7bc5b7995287e7",
+      "installMode": "copy"
+    },
+    "near-smart-contracts": {
+      "source": "near/agent-skills",
+      "ref": "cb32b6af195e636c1e9c2efe2ea75a6d85b6b67b",
+      "sourceType": "github",
+      "skillPath": "skills/near-smart-contracts/SKILL.md",
+      "computedHash": "0615674e279d5a509a648ff0e4e03a9cedfb2fb1dda7901ddeaa737903e68eb1",
+      "installMode": "copy"
+    },
+    "requesting-code-review": {
+      "source": "obra/superpowers",
+      "ref": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "sourceType": "github",
+      "skillPath": "skills/requesting-code-review/SKILL.md",
+      "computedHash": "b095ac8c980339436b41de9989328f3f288f2e2a70452df28452bbeb6531d604",
+      "installMode": "copy"
+    },
+    "systematic-debugging": {
+      "source": "obra/superpowers",
+      "ref": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "sourceType": "github",
+      "skillPath": "skills/systematic-debugging/SKILL.md",
+      "computedHash": "b7b6e98c3bffe371893bdb69845ec61124a65b6a96313dc8d6a2bce4437b13eb",
+      "installMode": "copy"
+    },
+    "test-driven-development": {
+      "source": "obra/superpowers",
+      "ref": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "sourceType": "github",
+      "skillPath": "skills/test-driven-development/SKILL.md",
+      "computedHash": "3cfe4ebb6fa7288f668d87880d279c8e48f7a92b63415e296857060f5ce22e05",
+      "installMode": "copy"
+    },
+    "verification-before-completion": {
+      "source": "obra/superpowers",
+      "ref": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "sourceType": "github",
+      "skillPath": "skills/verification-before-completion/SKILL.md",
+      "computedHash": "b529822bdac4b197b180fe12225cff86b930b65910435103c10622df7f041651",
+      "installMode": "copy"
+    },
+    "writing-plans": {
+      "source": "obra/superpowers",
+      "ref": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "sourceType": "github",
+      "skillPath": "skills/writing-plans/SKILL.md",
+      "computedHash": "c2647b5bf067be353a893e5a39a632cbbeb7ad81e61fa5ae227ece5490029073",
+      "installMode": "copy"
+    }
+  }
+}

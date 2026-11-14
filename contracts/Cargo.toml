@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = ["probe", "guardian", "guardian-factory", "guardian-types", "protocol-trigger", "tests", "tests/fixtures"]
+
+[workspace.package]
+edition = "2021"
+rust-version = "1.95"
+publish = false
+version = "0.0.0"
+
+[profile.release]
+codegen-units = 1
+opt-level = "z"
+lto = true
+panic = "abort"
+overflow-checks = true

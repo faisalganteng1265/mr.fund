@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "note": "Shared syntax vectors asserted independently by TypeScript and Rust, not live-network compatibility claims. OnlyRepay is verified for imported Rhea 0.16.2; imported testnet 0.11.0 requires the legacy Execute/Repay vector. guardian_repay is syntax only: the current Guardian receiver does not implement it. Outer amounts are token atomic strings; legacy inner Repay.max_amount is Rhea internal. args_json includes key order. Gas is not part of these vectors.",
+  "cases": [
+    {
+      "name": "wallet_repay_legacy",
+      "build": { "tokenId": "usdc.fakes.testnet", "receiverId": "contract.1689937928.burrow.testnet", "amount": "50000000", "msg": "{\"Execute\":{\"actions\":[{\"Repay\":{\"token_id\":\"usdc.fakes.testnet\",\"max_amount\":\"50000000000000000000\"}}]}}" },
+      "receiver_id": "usdc.fakes.testnet",
+      "method": "ft_transfer_call",
+      "args_json": "{\"receiver_id\":\"contract.1689937928.burrow.testnet\",\"amount\":\"50000000\",\"msg\":\"{\\\"Execute\\\":{\\\"actions\\\":[{\\\"Repay\\\":{\\\"token_id\\\":\\\"usdc.fakes.testnet\\\",\\\"max_amount\\\":\\\"50000000000000000000\\\"}}]}}\"}",
+      "deposit": "1"
+    },
+    {
+      "name": "wallet_repay",
+      "build": { "tokenId": "usdc.fakes.testnet", "receiverId": "contract.1689937928.burrow.testnet", "amount": "50000000", "msg": "\"OnlyRepay\"" },
+      "receiver_id": "usdc.fakes.testnet",
+      "method": "ft_transfer_call",
+      "args_json": "{\"receiver_id\":\"contract.1689937928.burrow.testnet\",\"amount\":\"50000000\",\"msg\":\"\\\"OnlyRepay\\\"\"}",
+      "deposit": "1"
+    },
+    {
+      "name": "guardian_repay",
+      "build": { "tokenId": "usdc.fakes.testnet", "receiverId": "guardian.alice.testnet", "amount": "50000000", "msg": "{\"repay\":{}}" },
+      "receiver_id": "usdc.fakes.testnet",
+      "method": "ft_transfer_call",
+      "args_json": "{\"receiver_id\":\"guardian.alice.testnet\",\"amount\":\"50000000\",\"msg\":\"{\\\"repay\\\":{}}\"}",
+      "deposit": "1"
+    },
+    {
+      "name": "fee_transfer",
+      "build": { "tokenId": "usdc.fakes.testnet", "receiverId": "fees.testnet", "amount": "100000" },
+      "receiver_id": "usdc.fakes.testnet",
+      "method": "ft_transfer",
+      "args_json": "{\"receiver_id\":\"fees.testnet\",\"amount\":\"100000\"}",
+      "deposit": "1"
+    },
+    {
+      "name": "storage_deposit",
+      "build": { "tokenId": "usdc.fakes.testnet", "accountId": "fees.testnet", "deposit": "1250000000000000000000" },
+      "receiver_id": "usdc.fakes.testnet",
+      "method": "storage_deposit",
+      "args_json": "{\"account_id\":\"fees.testnet\",\"registration_only\":true}",
+      "deposit": "1250000000000000000000"
+    }
+  ]
+}

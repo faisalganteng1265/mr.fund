@@ -1,0 +1,44 @@
+# Private working notes and local agent configuration stay on each machine.
+scratch/
+.omp/
+
+# Project skills in .claude/skills/ are committed (founder, 2026-11-04).
+# experimental_install restores into .agents/skills/; that copy stays local.
+.agents/skills/
+
+# Secrets. Only the example file is tracked.
+.env
+.env.*
+!.env.example
+
+# Dependencies and build output.
+node_modules/
+target/
+dist/
+build/
+out/
+.next/
+# Next dev regenerates this local framework-reference file.
+/apps/web/AGENTS.md
+coverage/
+*.tsbuildinfo
+*.wasm.map
+
+# Logs.
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS and editor junk.
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.idea/
+.vscode/
+
+# Test runner artifacts.
+.vitest/
+
+# Original download archive; the extracted runtime GLB is versioned.
+apps/web/public/businessman-rigged.zip

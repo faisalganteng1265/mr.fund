@@ -1,0 +1,21 @@
+{
+  "name": "@mrfund/watcher",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/main.ts",
+    "operator:preflight": "tsx src/operator-preflight.ts",
+    "operator:over-limit": "tsx src/public/cli.ts",
+    "sandbox:over-limit": "tsx src/sandbox/operator-cli.ts --sandbox-only",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@mrfund/engine": "workspace:*",
+    "@mrfund/guardian-client": "workspace:*",
+    "@mrfund/rhea": "workspace:*",
+    "@mrfund/shared": "workspace:*",
+    "near-api-js": "7.4.0",
+    "tsx": "4.23.15"
+  }
+}

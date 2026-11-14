@@ -1,0 +1,55 @@
+{
+  "provenance": {
+    "source": "https://archival-rpc.testnet.near.org (read-only final-state views at the execution block and the block before)",
+    "lending": "contract.1689937928.burrow.testnet",
+    "version": "0.11.0",
+    "recordedAt": "2026-11-13",
+    "note": "Pool balances are the interest-updated values at the execution block, derived as post-state minus the borrow's own effect. Prices were Rhea fixed default_price values, not market quotes. Derivation reproduced exactly by projectBorrow."
+  },
+  "vectors": [
+    {
+      "name": "gate1-plain-account",
+      "txHash": "88WMGMtmKXU24ST7jAdZcghJ2YDoAboWV2Ty9j6j4BLo",
+      "executionBlock": 277235621,
+      "account": "d-mrf-b1ce96af6a.testnet",
+      "token": "ref.fakes.testnet",
+      "extraDecimals": 0,
+      "inputs": {
+        "amountInternal": "500000000000000000",
+        "borrowedShares": "44459455679953101693465",
+        "borrowedBalance": "48809610013439014940495",
+        "suppliedShares": "370481008160211288092408",
+        "suppliedBalance": "377384649352991856987876",
+        "accountBorrowedShares": "0"
+      },
+      "expected": {
+        "issuedShares": "455437522116155388",
+        "debtAfterInternal": "500000000000000001",
+        "creditedShares": "490853309475336986",
+        "deliveredInternal": "499999999999999999"
+      }
+    },
+    {
+      "name": "guardian-test-account",
+      "txHash": "BBqxGynphs8QsZKKA2hTw1rMEuHc682qghDJMMyzT7mp",
+      "executionBlock": 277496824,
+      "account": "guardian-test.p-mrf-b1ce96af6a.testnet",
+      "token": "ref.fakes.testnet",
+      "extraDecimals": 0,
+      "inputs": {
+        "amountInternal": "500000000000000000",
+        "borrowedShares": "44459455679953101693465",
+        "borrowedBalance": "48813863093243374202814",
+        "suppliedShares": "370481008160211288092408",
+        "suppliedBalance": "377387839162847150640347",
+        "accountBorrowedShares": "0"
+      },
+      "expected": {
+        "issuedShares": "455397840517430870",
+        "debtAfterInternal": "500000000000000001",
+        "creditedShares": "490849160616890616",
+        "deliveredInternal": "499999999999999998"
+      }
+    }
+  ]
+}

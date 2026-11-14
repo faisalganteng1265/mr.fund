@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Mr.Fund: the DeFi manager you can talk to. Plain words, deterministic numbers, limits enforced by a NEAR contract.">
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" fill-opacity="0.07"/>
+    </pattern>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d7f8a4" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#d7f8a4" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="card"><rect x="716" y="64" width="412" height="292" rx="24"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="420" fill="#0c0c10"/>
+  <rect width="1200" height="420" fill="url(#dots)"/>
+
+  <!-- mark + wordmark -->
+  <rect x="72" y="62" width="56" height="56" rx="16" fill="#e4d7ba"/>
+  <text x="100" y="105" text-anchor="middle" font-family="'Bricolage Grotesque','Segoe UI',Arial,sans-serif" font-weight="800" font-size="34" fill="#17191b">m.</text>
+  <text x="142" y="102" font-family="'Bricolage Grotesque','Segoe UI',Arial,sans-serif" font-weight="700" font-size="30" fill="#ffffff">mr.fund</text>
+
+  <!-- headline -->
+  <text x="72" y="206" font-family="'Bricolage Grotesque','Segoe UI',Arial,sans-serif" font-weight="800" font-size="62" fill="#ffffff">The DeFi manager</text>
+  <text x="72" y="278" font-family="'Instrument Serif',Georgia,'Times New Roman',serif" font-style="italic" font-size="78" fill="#d7f8a4">you can talk to.</text>
+  <!-- subline -->
+  <text x="72" y="330" font-family="'Instrument Sans','Segoe UI',Arial,sans-serif" font-size="20" fill="#a2a4a5">Plain words. Tested numbers. Limits a NEAR contract enforces.</text>
+  <text x="72" y="364" font-family="'Instrument Sans','Segoe UI',Arial,sans-serif" font-size="15" fill="#6f7273" letter-spacing="1.2">NEAR TESTNET  ·  RHEA LENDING  ·  UNAUDITED HACKATHON CODE</text>
+
+  <!-- illustrative health chart -->
+  <g clip-path="url(#card)">
+    <rect x="716" y="64" width="412" height="292" fill="#121416"/>
+    <rect x="716" y="64" width="412" height="292" fill="none" stroke="#2c2f31" stroke-width="1.5" rx="24"/>
+  </g>
+  <text x="744" y="102" font-family="'Instrument Sans','Segoe UI',Arial,sans-serif" font-size="15" fill="#a2a4a5">Position health</text>
+  <text x="1100" y="102" text-anchor="end" font-family="'Instrument Sans','Segoe UI',Arial,sans-serif" font-size="12" fill="#6f7273" letter-spacing="1">ILLUSTRATIVE</text>
+
+  <!-- trigger line -->
+  <line x1="744" y1="210" x2="1100" y2="210" stroke="#ff643b" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <text x="744" y="200" font-family="'Instrument Sans','Segoe UI',Arial,sans-serif" font-size="13" fill="#ff643b">your trigger</text>
+  <!-- liquidation line -->
+  <line x1="744" y1="300" x2="1100" y2="300" stroke="#5a5d5f" stroke-width="1.5"/>
+  <text x="744" y="320" font-family="'Instrument Sans','Segoe UI',Arial,sans-serif" font-size="13" fill="#8a8d8f">liquidation (100%)</text>
+
+  <!-- health path: falls below the trigger, Guardian repays, health recovers -->
+  <path d="M744 150 C 790 148, 820 160, 856 182 S 912 226, 936 226 L 936 150 C 976 146, 1010 150, 1040 158 S 1084 170, 1100 168 L 1100 300 L 744 300 Z" fill="url(#area)"/>
+  <path d="M744 150 C 790 148, 820 160, 856 182 S 912 226, 936 226" fill="none" stroke="#d7f8a4" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M936 226 L 936 150" fill="none" stroke="#d7f8a4" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 9"/>
+  <path d="M936 150 C 976 146, 1010 150, 1040 158 S 1084 170, 1100 168" fill="none" stroke="#d7f8a4" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="936" cy="226" r="7" fill="#0c0c10" stroke="#ff643b" stroke-width="3"/>
+  <circle cx="936" cy="150" r="7" fill="#d7f8a4"/>
+  <text x="954" y="256" font-family="'Instrument Sans','Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#ffffff">Guardian repays within</text>
+  <text x="954" y="274" font-family="'Instrument Sans','Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#ffffff">the limits you set</text>
+</svg>

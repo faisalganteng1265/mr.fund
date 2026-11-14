@@ -1,0 +1,16 @@
+{
+  "_provenance": { "kind": "hand-computed", "description": "Simulated: 6-decimal collateral at $5 unless collateralPriceMultiplier overrides it, ratio 60%; 6-decimal debt with 12 Rhea extra decimals at $1, ratio 95%. healthBps floors the final exact ratio. publishedSourceBps models 27-decimal from_balance_price/mul_ratio/div_ratio from burrowland source 2110c7047f2d72a9189abcbaad5eafb4e4a87f9e, not a scalar observed from deployed WASM. Source-model reference and liquidation-discount vectors differ by 1 bp from exact health; the other listed vectors agree. Deployed tests independently check the 10000-bps risk boundary and modern liquidation discount, not arbitrary scalar health parity." },
+  "cases": [
+    { "name": "reference", "collateralInternal": "100000000", "debtInternal": "200000000000000000000", "healthBps": 14250, "publishedSourceBps": 14249 },
+    { "name": "one internal debt unit more", "collateralInternal": "100000000", "debtInternal": "200000000000000000001", "healthBps": 14249 },
+    { "name": "sandbox borrowed balance", "collateralInternal": "100000000", "debtInternal": "50000000000000000000", "healthBps": 57000 },
+    { "name": "zero collateral", "collateralInternal": "0", "debtInternal": "200000000000000000000", "healthBps": 0 },
+    { "name": "one internal unit below liquidation debt", "collateralInternal": "100000000", "debtInternal": "284999999999999999999", "healthBps": 10000 },
+    { "name": "liquidation equality", "collateralInternal": "100000000", "debtInternal": "285000000000000000000", "healthBps": 10000 },
+    { "name": "one internal unit above liquidation debt", "collateralInternal": "100000000", "debtInternal": "285000000000000000001", "healthBps": 9999 },
+    { "name": "one internal unit below trigger debt", "collateralInternal": "100000000", "debtInternal": "237499999999999999999", "healthBps": 12000 },
+    { "name": "trigger equality", "collateralInternal": "100000000", "debtInternal": "237500000000000000000", "healthBps": 12000 },
+    { "name": "one internal unit above trigger debt", "collateralInternal": "100000000", "debtInternal": "237500000000000000001", "healthBps": 11999 },
+    { "name": "liquidation discount observation", "collateralInternal": "100000000", "debtInternal": "200000000000000000000", "collateralPriceMultiplier": "30000", "healthBps": 8550, "publishedSourceBps": 8549 }
+  ]
+}

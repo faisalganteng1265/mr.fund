@@ -1,0 +1,1833 @@
+{
+  "_provenance": {
+    "kind": "recorded-rpc",
+    "network": "testnet",
+    "rpcUrl": "https://test.rpc.fastnear.com",
+    "lendingId": "contract.1689937928.burrow.testnet",
+    "accountId": "owner.1689937928.burrow.testnet",
+    "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+    "blockHeight": 276419739,
+    "recordedAt": "2026-11-06T01:11:22.068Z"
+  },
+  "calls": [
+    {
+      "contractId": "contract.1689937928.burrow.testnet",
+      "method": "get_config",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "oracle_account_id": "mock-priceoracle.testnet",
+        "pyth_oracle_account_id": "pyth-oracle.testnet",
+        "ref_exchange_id": "exchange.ref-dev.testnet",
+        "owner_id": "ref-finance.sputnikv2.testnet",
+        "booster_token_id": "token.1689937928.burrow.testnet",
+        "booster_decimals": 18,
+        "max_num_assets": 20,
+        "maximum_recency_duration_sec": 90,
+        "maximum_staleness_duration_sec": 15,
+        "lp_tokens_info_valid_duration_sec": 600,
+        "pyth_price_valid_duration_sec": 60,
+        "minimum_staking_duration_sec": 5184000,
+        "maximum_staking_duration_sec": 31104000,
+        "x_booster_multiplier_at_maximum_staking_duration": 120000,
+        "force_closing_enabled": true,
+        "enable_price_oracle": false,
+        "enable_pyth_oracle": true
+      }
+    },
+    {
+      "contractId": "contract.1689937928.burrow.testnet",
+      "method": "get_version",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": "0.11.0"
+    },
+    {
+      "contractId": "contract.1689937928.burrow.testnet",
+      "method": "get_assets_paged_detailed",
+      "args": {
+        "from_index": 0,
+        "limit": 20
+      },
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": [
+        {
+          "token_id": "dai.fakes.testnet",
+          "supplied": {
+            "shares": "1156733147854529441091",
+            "balance": "1266148413373186341484"
+          },
+          "borrowed": {
+            "shares": "1167005958872108790515",
+            "balance": "1306705128801400534694"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "1905323836686061607953",
+          "prot_fee": "0",
+          "uahpi": "0",
+          "last_update_timestamp": "1793927471305788250",
+          "config": {
+            "reserve_ratio": 2500,
+            "prot_ratio": 0,
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000002440418605283556",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 9500,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 10000
+          },
+          "supply_apr": "0.031295889742073020475893551",
+          "borrow_apr": "0.040432729382871475798218705",
+          "farms": []
+        },
+        {
+          "token_id": "usdt.fakes.testnet",
+          "supplied": {
+            "shares": "1002248904634534092928242",
+            "balance": "1002523731467188007362778"
+          },
+          "borrowed": {
+            "shares": "182177577622071070929",
+            "balance": "182318786807515781041"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "12954633124532000000000000",
+          "reserved": "1580018909442990716774",
+          "prot_fee": "0",
+          "uahpi": "0",
+          "last_update_timestamp": "1793927471305119506",
+          "config": {
+            "reserve_ratio": 2500,
+            "prot_ratio": 0,
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000002440418605283556",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 9500,
+            "extra_decimals": 12,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 10000
+          },
+          "supply_apr": "0.00000000238251474533711929",
+          "borrow_apr": "0.000017467774364490257869219",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "usdt.fakes.testnet"
+              },
+              "rewards": {}
+            },
+            {
+              "farm_id": {
+                "Borrowed": "usdt.fakes.testnet"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "usdc.fakes.testnet",
+          "supplied": {
+            "shares": "55676309184772823040947",
+            "balance": "752310392423055231917927"
+          },
+          "borrowed": {
+            "shares": "54727523248900392975172",
+            "balance": "983407652900392202207108"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "2996868481743242132932",
+          "prot_fee": "232170908808446510541276",
+          "uahpi": "0",
+          "last_update_timestamp": "1793927471305742836",
+          "config": {
+            "reserve_ratio": 2500,
+            "prot_ratio": 10000,
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000002440418605283556",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 9500,
+            "extra_decimals": 12,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 10000
+          },
+          "supply_apr": "2.368812670301423034697802672",
+          "borrow_apr": "2.416200286578643234232001591",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "usdc.fakes.testnet"
+              },
+              "rewards": {
+                "ref.fakes.testnet": {
+                  "reward_per_day": "1000000000000000000",
+                  "booster_log_base": "0",
+                  "remaining_rewards": "0",
+                  "boosted_shares": "51961755070303374065885"
+                }
+              }
+            },
+            {
+              "farm_id": {
+                "Borrowed": "usdc.fakes.testnet"
+              },
+              "rewards": {
+                "token.1689937928.burrow.testnet": {
+                  "reward_per_day": "10000000000000000000",
+                  "booster_log_base": "0",
+                  "remaining_rewards": "0",
+                  "boosted_shares": "54727423245858986594914"
+                },
+                "ref.fakes.testnet": {
+                  "reward_per_day": "5000000000000000000",
+                  "booster_log_base": "0",
+                  "remaining_rewards": "0",
+                  "boosted_shares": "54727423245858986594914"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "token_id": "wrap.testnet",
+          "supplied": {
+            "shares": "4427447846860891642854225469",
+            "balance": "4537695940122674129055392491"
+          },
+          "borrowed": {
+            "shares": "4479934969997091670496023370",
+            "balance": "4783393727124328339975024337"
+          },
+          "margin_debt": {
+            "shares": "15705580088585456875756436",
+            "balance": "16175886860437473613813539"
+          },
+          "margin_pending_debt": "10000000000000000000000000",
+          "margin_position": "18579991434566952156594280",
+          "reserved": "271894031673695747067641805",
+          "prot_fee": "0",
+          "uahpi": "0",
+          "last_update_timestamp": "1793927471305275288",
+          "config": {
+            "reserve_ratio": 2500,
+            "prot_ratio": 0,
+            "target_utilization": 6000,
+            "target_utilization_rate": "1000000000003593629036885046",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 6000,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 10000
+          },
+          "supply_apr": "1.978818467250246350471476384",
+          "borrow_apr": "2.499957799484635360883043892",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "wrap.testnet"
+              },
+              "rewards": {}
+            },
+            {
+              "farm_id": {
+                "Borrowed": "wrap.testnet"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "token.1689937928.burrow.testnet",
+          "supplied": {
+            "shares": "3787230977656446860764",
+            "balance": "3787230977656446860764"
+          },
+          "borrowed": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "199906690000000000000000000",
+          "prot_fee": "0",
+          "uahpi": "0",
+          "last_update_timestamp": "1793927471305578774",
+          "config": {
+            "reserve_ratio": 2500,
+            "prot_ratio": 0,
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000001547125956667610",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 6000,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": false,
+            "can_borrow": false,
+            "net_tvl_multiplier": 10000
+          },
+          "supply_apr": "0.0",
+          "borrow_apr": "0.0",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "token.1689937928.burrow.testnet"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "linear-protocol.testnet",
+          "supplied": {
+            "shares": "407894418600010471043502120",
+            "balance": "419934992625513874604942427"
+          },
+          "borrowed": {
+            "shares": "117568728953484825654506993",
+            "balance": "132326502983008585666342900"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "5408470592738852005033914",
+          "prot_fee": "0",
+          "uahpi": "0",
+          "last_update_timestamp": "1793927471305536359",
+          "config": {
+            "reserve_ratio": 2500,
+            "prot_ratio": 0,
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000003593629036885046",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 5000,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 2500
+          },
+          "supply_apr": "0.010648491806112988550064987",
+          "borrow_apr": "0.045056978783729505923301533",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "linear-protocol.testnet"
+              },
+              "rewards": {}
+            },
+            {
+              "farm_id": {
+                "Borrowed": "linear-protocol.testnet"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "eth.fakes.testnet",
+          "supplied": {
+            "shares": "10215755976062734703",
+            "balance": "43205140624054312756"
+          },
+          "borrowed": {
+            "shares": "10584500905526274856",
+            "balance": "54585592319214716886"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "13003996647649323662",
+          "prot_fee": "0",
+          "uahpi": "0",
+          "last_update_timestamp": "1793927471305272956",
+          "config": {
+            "reserve_ratio": 2500,
+            "prot_ratio": 0,
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000003593629036885046",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 7500,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 2500
+          },
+          "supply_apr": "1.865678953051111983304642038",
+          "borrow_apr": "1.968942550616046278773782882",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "eth.fakes.testnet"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "usdtt.fakes.testnet",
+          "supplied": {
+            "shares": "36176544870872084664766",
+            "balance": "36176592916550604415102"
+          },
+          "borrowed": {
+            "shares": "136542491872996520713",
+            "balance": "136606594470593411307"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "50000016015212368274268",
+          "prot_fee": "0",
+          "uahpi": "0",
+          "last_update_timestamp": "1793927471305673648",
+          "config": {
+            "reserve_ratio": 2500,
+            "prot_ratio": 0,
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000002440418605283556",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 9500,
+            "extra_decimals": 12,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 10000
+          },
+          "supply_apr": "0.000000431918286518977227957",
+          "borrow_apr": "0.000152509299522136810017212",
+          "farms": []
+        },
+        {
+          "token_id": "usdcc.fakes.testnet",
+          "supplied": {
+            "shares": "49964429246718588484792",
+            "balance": "50033786167458424151156"
+          },
+          "borrowed": {
+            "shares": "159225473174550317444",
+            "balance": "159303429364711501521"
+          },
+          "margin_debt": {
+            "shares": "6449991783294505536",
+            "balance": "6451256448516995331"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "50730264354531802719828",
+          "prot_fee": "9411396734084413",
+          "uahpi": "0",
+          "last_update_timestamp": "1793927471304931555",
+          "config": {
+            "reserve_ratio": 2500,
+            "prot_ratio": 5000,
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000002440418605283556",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 9500,
+            "extra_decimals": 12,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 10000
+          },
+          "supply_apr": "0.000000385570713811131379631",
+          "borrow_apr": "0.00015826156939264295015953",
+          "farms": []
+        },
+        {
+          "token_id": "3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af",
+          "supplied": {
+            "shares": "50025217085609465576787",
+            "balance": "50031449939412002104181"
+          },
+          "borrowed": {
+            "shares": "278929613784613959935",
+            "balance": "279392117428839164067"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "498113946875164106664",
+          "prot_fee": "0",
+          "uahpi": "0",
+          "last_update_timestamp": "1793927471305790641",
+          "config": {
+            "reserve_ratio": 2500,
+            "prot_ratio": 0,
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000002440418605283556",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 9500,
+            "extra_decimals": 12,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 10000
+          },
+          "supply_apr": "0.000002228421709012133684245",
+          "borrow_apr": "0.000532065448394936306666226",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "ref.fakes.testnet",
+          "supplied": {
+            "shares": "370481008160211288092408",
+            "balance": "377374572849891555904392"
+          },
+          "borrowed": {
+            "shares": "44459455679953101693465",
+            "balance": "48796174675971946829183"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "7320584475613809576992",
+          "prot_fee": "866124453966275512881",
+          "uahpi": "0",
+          "last_update_timestamp": "1793927471304999926",
+          "config": {
+            "reserve_ratio": 2500,
+            "prot_ratio": 8000,
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000003593629036885046",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 7500,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 2500
+          },
+          "supply_apr": "0.001754347236260845832455027",
+          "borrow_apr": "0.018090107631335208731071014",
+          "farms": [
+            {
+              "farm_id": {
+                "Supplied": "ref.fakes.testnet"
+              },
+              "rewards": {}
+            }
+          ]
+        },
+        {
+          "token_id": "shadow_ref_v1-269",
+          "supplied": {
+            "shares": "654614542414169810055143691",
+            "balance": "654614542414169810055143691"
+          },
+          "borrowed": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "0",
+          "prot_fee": "0",
+          "uahpi": "0",
+          "last_update_timestamp": "1793927471305922771",
+          "config": {
+            "reserve_ratio": 2500,
+            "prot_ratio": 0,
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000003593629036885046",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 9000,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": false,
+            "net_tvl_multiplier": 10000
+          },
+          "supply_apr": "0.0",
+          "borrow_apr": "0.0",
+          "farms": []
+        },
+        {
+          "token_id": "shadow_ref_v1-711",
+          "supplied": {
+            "shares": "6113020490409549217582724397",
+            "balance": "6113020490409549217582724397"
+          },
+          "borrowed": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "0",
+          "prot_fee": "0",
+          "uahpi": "0",
+          "last_update_timestamp": "1793927471305122385",
+          "config": {
+            "reserve_ratio": 2500,
+            "prot_ratio": 0,
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000003593629036885046",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 9500,
+            "extra_decimals": 0,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": false,
+            "net_tvl_multiplier": 10000
+          },
+          "supply_apr": "0.0",
+          "borrow_apr": "0.0",
+          "farms": []
+        },
+        {
+          "token_id": "usdtt.ft.ref-labs.testnet",
+          "supplied": {
+            "shares": "1000000000000000000000",
+            "balance": "1000000000000000000000"
+          },
+          "borrowed": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "0",
+          "prot_fee": "0",
+          "uahpi": "0",
+          "last_update_timestamp": "1793927471305363278",
+          "config": {
+            "reserve_ratio": 2500,
+            "prot_ratio": 10000,
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000002440418605283556",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 9500,
+            "extra_decimals": 12,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 10000
+          },
+          "supply_apr": "0.0",
+          "borrow_apr": "0.0",
+          "farms": []
+        },
+        {
+          "token_id": "usdcc.ft.ref-labs.testnet",
+          "supplied": {
+            "shares": "1010000000000000000000",
+            "balance": "1010000000000000000000"
+          },
+          "borrowed": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_debt": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "0",
+          "reserved": "0",
+          "prot_fee": "0",
+          "uahpi": "0",
+          "last_update_timestamp": "1793927471305914990",
+          "config": {
+            "reserve_ratio": 2500,
+            "prot_ratio": 10000,
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000002440418605283556",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 9500,
+            "extra_decimals": 12,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 10000
+          },
+          "supply_apr": "0.0",
+          "borrow_apr": "0.0",
+          "farms": []
+        },
+        {
+          "token_id": "usdce.ft.ref-labs.testnet",
+          "supplied": {
+            "shares": "1010999999969134681661",
+            "balance": "1011002206827930401489"
+          },
+          "borrowed": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_debt": {
+            "shares": "5400000000000000000",
+            "balance": "5402942437240535318"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "19546953000000000000",
+          "reserved": "0",
+          "prot_fee": "735609310133829",
+          "uahpi": "0",
+          "last_update_timestamp": "1793927471305212776",
+          "config": {
+            "reserve_ratio": 2500,
+            "prot_ratio": 10000,
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000002440418605283556",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 9500,
+            "extra_decimals": 12,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 10000
+          },
+          "supply_apr": "0.000001030443522109810788116",
+          "borrow_apr": "0.000514245513446341925126324",
+          "farms": []
+        },
+        {
+          "token_id": "usdte.ft.ref-labs.testnet",
+          "supplied": {
+            "shares": "1040640017640917660115",
+            "balance": "1042132090827839386314"
+          },
+          "borrowed": {
+            "shares": "0",
+            "balance": "0"
+          },
+          "margin_debt": {
+            "shares": "122484878487120573198",
+            "balance": "124346912533838469338"
+          },
+          "margin_pending_debt": "0",
+          "margin_position": "34795700000000000000",
+          "reserved": "0",
+          "prot_fee": "499839659642137968",
+          "uahpi": "0",
+          "last_update_timestamp": "1793927471305349325",
+          "config": {
+            "reserve_ratio": 2500,
+            "prot_ratio": 10000,
+            "target_utilization": 8000,
+            "target_utilization_rate": "1000000000002440418605283556",
+            "max_utilization_rate": "1000000000039724853136740579",
+            "holding_position_fee_rate": "1000000000000000000000000000",
+            "volatility_ratio": 9500,
+            "extra_decimals": 12,
+            "can_deposit": true,
+            "can_withdraw": true,
+            "can_use_as_collateral": true,
+            "can_borrow": true,
+            "net_tvl_multiplier": 10000
+          },
+          "supply_apr": "0.000514842891491554173002681",
+          "borrow_apr": "0.011539279439742893665782954",
+          "farms": []
+        }
+      ]
+    },
+    {
+      "contractId": "contract.1689937928.burrow.testnet",
+      "method": "get_all_token_pyth_infos",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "usdt.fakes.testnet": {
+          "decimals": 6,
+          "fraction_digits": 4,
+          "price_identifier": "1fc18861232290221461220bd4e2acd1dcdfbc89c84092c93c18bdc7756c1588",
+          "extra_call": null,
+          "default_price": null
+        },
+        "wrap.testnet": {
+          "decimals": 24,
+          "fraction_digits": 4,
+          "price_identifier": "0000000000000000000000000000000000000000000000000000000000b37928",
+          "extra_call": null,
+          "default_price": {
+            "multiplier": "960",
+            "decimals": 26
+          }
+        },
+        "aurora.fakes.testnet": {
+          "decimals": 18,
+          "fraction_digits": 5,
+          "price_identifier": "eb00e1f858549e12034ff880b7592456a71b4237aaf4aeb16e63cd9b68ba4d7e",
+          "extra_call": null,
+          "default_price": null
+        },
+        "dai.fakes.testnet": {
+          "decimals": 18,
+          "fraction_digits": 4,
+          "price_identifier": "87a67534df591d2dd5ec577ab3c75668a8e3d35e92e27bf29d9e2e52df8de412",
+          "extra_call": null,
+          "default_price": null
+        },
+        "usdc.fakes.testnet": {
+          "decimals": 6,
+          "fraction_digits": 4,
+          "price_identifier": "41f3625971ca2ed2263e78573fe5ce23e13d2558ed3f2e47ab0f84fb9e7ae722",
+          "extra_call": null,
+          "default_price": null
+        },
+        "ref.fakes.testnet": {
+          "decimals": 18,
+          "fraction_digits": 2,
+          "price_identifier": "0000000000000000000000000000000000000000000000000000000000000000",
+          "extra_call": null,
+          "default_price": {
+            "multiplier": "250",
+            "decimals": 20
+          }
+        },
+        "usdce.ft.ref-labs.testnet": {
+          "decimals": 6,
+          "fraction_digits": 4,
+          "price_identifier": "41f3625971ca2ed2263e78573fe5ce23e13d2558ed3f2e47ab0f84fb9e7ae722",
+          "extra_call": null,
+          "default_price": null
+        },
+        "usdcc.fakes.testnet": {
+          "decimals": 6,
+          "fraction_digits": 4,
+          "price_identifier": "41f3625971ca2ed2263e78573fe5ce23e13d2558ed3f2e47ab0f84fb9e7ae722",
+          "extra_call": null,
+          "default_price": null
+        },
+        "weth.fakes.testnet": {
+          "decimals": 18,
+          "fraction_digits": 2,
+          "price_identifier": "ca80ba6dc32e08d06f1aa886011eed1d77c77be9eb761cc10d72b7d0a2fd57a6",
+          "extra_call": null,
+          "default_price": null
+        },
+        "usdte.ft.ref-labs.testnet": {
+          "decimals": 6,
+          "fraction_digits": 4,
+          "price_identifier": "1fc18861232290221461220bd4e2acd1dcdfbc89c84092c93c18bdc7756c1588",
+          "extra_call": null,
+          "default_price": null
+        },
+        "linear-protocol.testnet": {
+          "decimals": 24,
+          "fraction_digits": 4,
+          "price_identifier": "27e867f0f4f61076456d1a73b14c7edc1cf5cef4f4d6193a33424288f11bd0f4",
+          "extra_call": "ft_price",
+          "default_price": null
+        },
+        "usdtt.ft.ref-labs.testnet": {
+          "decimals": 6,
+          "fraction_digits": 4,
+          "price_identifier": "1fc18861232290221461220bd4e2acd1dcdfbc89c84092c93c18bdc7756c1588",
+          "extra_call": null,
+          "default_price": null
+        },
+        "wbtc.fakes.testnet": {
+          "decimals": 8,
+          "fraction_digits": 2,
+          "price_identifier": "ea0459ab2954676022baaceadb472c1acc97888062864aa23e9771bae3ff36ed",
+          "extra_call": null,
+          "default_price": null
+        },
+        "usdcc.ft.ref-labs.testnet": {
+          "decimals": 6,
+          "fraction_digits": 4,
+          "price_identifier": "41f3625971ca2ed2263e78573fe5ce23e13d2558ed3f2e47ab0f84fb9e7ae722",
+          "extra_call": null,
+          "default_price": null
+        },
+        "3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af": {
+          "decimals": 6,
+          "fraction_digits": 4,
+          "price_identifier": "41f3625971ca2ed2263e78573fe5ce23e13d2558ed3f2e47ab0f84fb9e7ae722",
+          "extra_call": null,
+          "default_price": null
+        },
+        "token.1689937928.burrow.testnet": {
+          "decimals": 18,
+          "fraction_digits": 2,
+          "price_identifier": "0000000000000000000000000000000000000000000000000000000000b37928",
+          "extra_call": null,
+          "default_price": {
+            "multiplier": "99",
+            "decimals": 20
+          }
+        },
+        "woo.orderly.testnet": {
+          "decimals": 18,
+          "fraction_digits": 6,
+          "price_identifier": "bf517e0f7ccfc307f0b2fa93b99a737641933989af6af769c928725989c21e66",
+          "extra_call": null,
+          "default_price": null
+        },
+        "aurora": {
+          "decimals": 18,
+          "fraction_digits": 2,
+          "price_identifier": "ca80ba6dc32e08d06f1aa886011eed1d77c77be9eb761cc10d72b7d0a2fd57a6",
+          "extra_call": null,
+          "default_price": null
+        },
+        "eth.fakes.testnet": {
+          "decimals": 18,
+          "fraction_digits": 2,
+          "price_identifier": "ca80ba6dc32e08d06f1aa886011eed1d77c77be9eb761cc10d72b7d0a2fd57a6",
+          "extra_call": null,
+          "default_price": null
+        },
+        "usdtt.fakes.testnet": {
+          "decimals": 6,
+          "fraction_digits": 4,
+          "price_identifier": "1fc18861232290221461220bd4e2acd1dcdfbc89c84092c93c18bdc7756c1588",
+          "extra_call": null,
+          "default_price": null
+        }
+      }
+    },
+    {
+      "contractId": "contract.1689937928.burrow.testnet",
+      "method": "get_accounts_paged",
+      "args": {
+        "from_index": 0,
+        "limit": 10
+      },
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": [
+        {
+          "account_id": "owner.1689937928.burrow.testnet",
+          "supplied": {
+            "ref.fakes.testnet": "1798464321606",
+            "usdcc.fakes.testnet": "260306817547",
+            "3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af": "2574605895",
+            "usdc.fakes.testnet": "3180000000179822981598",
+            "dai.fakes.testnet": "100000000000000000000",
+            "usdt.fakes.testnet": "100000000004321597521",
+            "wrap.testnet": "1000000000000000000000000"
+          },
+          "positions": {
+            "REGULAR": {
+              "RegularPosition": {
+                "collateral": {
+                  "usdc.fakes.testnet": "385000000000000000000"
+                },
+                "borrowed": {
+                  "usdt.fakes.testnet": "121004727769"
+                }
+              }
+            }
+          },
+          "booster_staking": null,
+          "is_locked": false
+        },
+        {
+          "account_id": "juaner.testnet",
+          "supplied": {
+            "dai.fakes.testnet": "1459250393583596262",
+            "usdtt.fakes.testnet": "49999999440914039",
+            "usdc.fakes.testnet": "212351308900",
+            "3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af": "40084",
+            "ref.fakes.testnet": "66222784847416672626237",
+            "linear-protocol.testnet": "10727601199894424780822861",
+            "usdt.fakes.testnet": "479526491105552106"
+          },
+          "positions": {
+            "shadow_ref_v1-269": {
+              "LPTokenPosition": {
+                "lpt_id": "shadow_ref_v1-269",
+                "collateral": "510000000000000000000000000",
+                "borrowed": {}
+              }
+            },
+            "REGULAR": {
+              "RegularPosition": {
+                "collateral": {
+                  "linear-protocol.testnet": "9956320860529170422102120",
+                  "3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af": "50004111600938737284139",
+                  "usdc.fakes.testnet": "50000344030696821825262",
+                  "usdt.fakes.testnet": "680311186",
+                  "ref.fakes.testnet": "100000000000000000000000",
+                  "usdtt.fakes.testnet": "36156494868228260430324",
+                  "wrap.testnet": "10996462950116447008634928"
+                },
+                "borrowed": {
+                  "wrap.testnet": "99402692703186044425265356",
+                  "usdt.fakes.testnet": "2215181787935638",
+                  "eth.fakes.testnet": "10583501384481723081",
+                  "linear-protocol.testnet": "99081677029092501675812474",
+                  "usdc.fakes.testnet": "52253177043301133392644",
+                  "ref.fakes.testnet": "42152585640863109964269",
+                  "usdcc.fakes.testnet": "966090733253"
+                }
+              }
+            }
+          },
+          "booster_staking": null,
+          "is_locked": false
+        },
+        {
+          "account_id": "juaner2.testnet",
+          "supplied": {
+            "token.1689937928.burrow.testnet": "10173700482164351850"
+          },
+          "positions": {
+            "REGULAR": {
+              "RegularPosition": {
+                "collateral": {
+                  "linear-protocol.testnet": "75373561785746472665963947"
+                },
+                "borrowed": {
+                  "wrap.testnet": "22606189477203810507987756"
+                }
+              }
+            }
+          },
+          "booster_staking": null,
+          "is_locked": false
+        },
+        {
+          "account_id": "juaner5.testnet",
+          "supplied": {
+            "token.1689937928.burrow.testnet": "847686372149584362309"
+          },
+          "positions": {
+            "REGULAR": {
+              "RegularPosition": {
+                "collateral": {
+                  "linear-protocol.testnet": "300573119015969827736388245",
+                  "usdc.fakes.testnet": "1999999998609704559"
+                },
+                "borrowed": {
+                  "linear-protocol.testnet": "2447006784556127",
+                  "usdcc.fakes.testnet": "127864483544789968968",
+                  "3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af": "2007210149604",
+                  "usdt.fakes.testnet": "986696452258",
+                  "usdtt.fakes.testnet": "95542533731682800000"
+                }
+              }
+            }
+          },
+          "booster_staking": null,
+          "is_locked": false
+        },
+        {
+          "account_id": "zonquan.testnet",
+          "supplied": {
+            "usdtt.fakes.testnet": "7823914",
+            "wrap.testnet": "48068706061630554",
+            "3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af": "999",
+            "usdt.fakes.testnet": "82316293901",
+            "token.1689937928.burrow.testnet": "99312154430962230143",
+            "ref.fakes.testnet": "954761264853189172068",
+            "linear-protocol.testnet": "999"
+          },
+          "positions": {
+            "REGULAR": {
+              "RegularPosition": {
+                "collateral": {
+                  "wrap.testnet": "3629885535393435106394551847"
+                },
+                "borrowed": {
+                  "eth.fakes.testnet": "22593219059",
+                  "ref.fakes.testnet": "1924698820720935247876",
+                  "linear-protocol.testnet": "74552709645732838398373",
+                  "wrap.testnet": "39383975024586880433351889",
+                  "dai.fakes.testnet": "1621692093592",
+                  "3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af": "12499161023079843230"
+                }
+              }
+            }
+          },
+          "booster_staking": null,
+          "is_locked": false
+        },
+        {
+          "account_id": "juaner10.testnet",
+          "supplied": {
+            "token.1689937928.burrow.testnet": "2592321748372663103751",
+            "dai.fakes.testnet": "996965014167947825334"
+          },
+          "positions": {
+            "REGULAR": {
+              "RegularPosition": {
+                "collateral": {
+                  "wrap.testnet": "1999086161581065351288418"
+                },
+                "borrowed": {
+                  "3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af": "1000899931412"
+                }
+              }
+            }
+          },
+          "booster_staking": null,
+          "is_locked": false
+        },
+        {
+          "account_id": "juaner1.testnet",
+          "supplied": {
+            "wrap.testnet": "4998819176220465265726186",
+            "dai.fakes.testnet": "53619616764475257265",
+            "3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af": "9998169225791390",
+            "token.1689937928.burrow.testnet": "22029943686793628693",
+            "eth.fakes.testnet": "4969247861988057047",
+            "ref.fakes.testnet": "212913118254347642374",
+            "shadow_ref_v1-711": "5000000000000000000000000",
+            "usdcc.fakes.testnet": "18973683285872590926",
+            "usdt.fakes.testnet": "13836108"
+          },
+          "positions": {
+            "REGULAR": {
+              "RegularPosition": {
+                "collateral": {
+                  "usdc.fakes.testnet": "1664716110128991",
+                  "usdt.fakes.testnet": "57643479536402772576",
+                  "wrap.testnet": "4998816053012841699330673",
+                  "ref.fakes.testnet": "5000997618015209970028",
+                  "3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af": "9008938655775012626",
+                  "linear-protocol.testnet": "9999759493143549559579745",
+                  "eth.fakes.testnet": "3306345164102515329"
+                },
+                "borrowed": {
+                  "wrap.testnet": "71558442129026181132481774",
+                  "linear-protocol.testnet": "4657749802273624843172174",
+                  "usdc.fakes.testnet": "2333980395034253425841",
+                  "usdcc.fakes.testnet": "9999437277839639585"
+                }
+              }
+            },
+            "shadow_ref_v1-711": {
+              "LPTokenPosition": {
+                "lpt_id": "shadow_ref_v1-711",
+                "collateral": "20000000000000000000000000",
+                "borrowed": {}
+              }
+            }
+          },
+          "booster_staking": {
+            "staked_booster_amount": "11675913434218904700",
+            "x_booster_amount": "11695107372173259551",
+            "unlock_timestamp": "1705815821586511433"
+          },
+          "is_locked": false
+        },
+        {
+          "account_id": "juaner110.testnet",
+          "supplied": {
+            "shadow_ref_v1-269": "48476528823791399717624868",
+            "usdt.fakes.testnet": "2830646686343723061",
+            "ref.fakes.testnet": "1325960788986356852",
+            "token.1689937928.burrow.testnet": "129127062653210054214",
+            "usdc.fakes.testnet": "2598424424624027730",
+            "dai.fakes.testnet": "992633325949211035",
+            "shadow_ref_v1-711": "198905670388033312551325809"
+          },
+          "positions": {
+            "REGULAR": {
+              "RegularPosition": {
+                "collateral": {
+                  "eth.fakes.testnet": "1000000000000000000",
+                  "usdc.fakes.testnet": "102000000000000000000",
+                  "usdt.fakes.testnet": "999971857995441727"
+                },
+                "borrowed": {
+                  "3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af": "100000000000000000000",
+                  "dai.fakes.testnet": "994113767913062275561"
+                }
+              }
+            },
+            "shadow_ref_v1-269": {
+              "LPTokenPosition": {
+                "lpt_id": "shadow_ref_v1-269",
+                "collateral": "1000000000000000000000000",
+                "borrowed": {}
+              }
+            },
+            "shadow_ref_v1-711": {
+              "LPTokenPosition": {
+                "lpt_id": "shadow_ref_v1-711",
+                "collateral": "1000000000000000000000000",
+                "borrowed": {}
+              }
+            }
+          },
+          "booster_staking": null,
+          "is_locked": false
+        },
+        {
+          "account_id": "juaner112.testnet",
+          "supplied": {
+            "dai.fakes.testnet": "48719636849498642",
+            "usdc.fakes.testnet": "29738466721397493255",
+            "usdt.fakes.testnet": "16638765989429453846",
+            "token.1689937928.burrow.testnet": "33999656085021064391"
+          },
+          "positions": {},
+          "booster_staking": {
+            "staked_booster_amount": "17973871290527286373",
+            "x_booster_amount": "17973871290527286373",
+            "unlock_timestamp": "1694145270286311714"
+          },
+          "is_locked": false
+        },
+        {
+          "account_id": "juaner118.testnet",
+          "supplied": {
+            "usdt.fakes.testnet": "1704821229025213278",
+            "token.1689937928.burrow.testnet": "23913539153184350431",
+            "usdc.fakes.testnet": "5386609948085756643"
+          },
+          "positions": {
+            "REGULAR": {
+              "RegularPosition": {
+                "collateral": {
+                  "wrap.testnet": "5278374584164054495520860",
+                  "dai.fakes.testnet": "1"
+                },
+                "borrowed": {
+                  "dai.fakes.testnet": "968604331481163880",
+                  "3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af": "1228992107034433509",
+                  "linear-protocol.testnet": "99998580774871491524529"
+                }
+              }
+            }
+          },
+          "booster_staking": null,
+          "is_locked": false
+        }
+      ]
+    },
+    {
+      "contractId": "contract.1689937928.burrow.testnet",
+      "method": "get_account",
+      "args": {
+        "account_id": "owner.1689937928.burrow.testnet"
+      },
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "account_id": "owner.1689937928.burrow.testnet",
+        "supplied": [
+          {
+            "token_id": "ref.fakes.testnet",
+            "balance": "1831928466514",
+            "shares": "1798464321606",
+            "apr": "0.001754347236260845832455027"
+          },
+          {
+            "token_id": "usdcc.fakes.testnet",
+            "balance": "260668156195",
+            "shares": "260306817547",
+            "apr": "0.000000385570713811131379631"
+          },
+          {
+            "token_id": "3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af",
+            "balance": "2574926676",
+            "shares": "2574605895",
+            "apr": "0.000002228421709012133684245"
+          },
+          {
+            "token_id": "usdc.fakes.testnet",
+            "balance": "42968851259538817224757",
+            "shares": "3180000000179822981598",
+            "apr": "2.368812670301423034697802672"
+          },
+          {
+            "token_id": "dai.fakes.testnet",
+            "balance": "109458989372060162064",
+            "shares": "100000000000000000000",
+            "apr": "0.031295889742073020475893551"
+          },
+          {
+            "token_id": "usdt.fakes.testnet",
+            "balance": "100027421020338173344",
+            "shares": "100000000004321597521",
+            "apr": "0.00000000238251474533711929"
+          },
+          {
+            "token_id": "wrap.testnet",
+            "balance": "1024901048431310054941377",
+            "shares": "1000000000000000000000000",
+            "apr": "1.978818467250246350471476384"
+          }
+        ],
+        "collateral": [
+          {
+            "token_id": "usdc.fakes.testnet",
+            "balance": "5202203689933009073310",
+            "shares": "385000000000000000000",
+            "apr": "2.368812670301423034697802672"
+          }
+        ],
+        "borrowed": [
+          {
+            "token_id": "usdt.fakes.testnet",
+            "balance": "121098520756",
+            "shares": "121004727769",
+            "apr": "0.000017467774364490257869219"
+          }
+        ],
+        "farms": [
+          {
+            "farm_id": "NetTvl",
+            "rewards": []
+          }
+        ],
+        "has_non_farmed_assets": true,
+        "booster_staking": null
+      }
+    },
+    {
+      "contractId": "contract.1689937928.burrow.testnet",
+      "method": "get_account",
+      "args": {
+        "account_id": "owner.1689937928.burrow.testnet"
+      },
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "account_id": "owner.1689937928.burrow.testnet",
+        "supplied": [
+          {
+            "token_id": "ref.fakes.testnet",
+            "balance": "1831928466514",
+            "shares": "1798464321606",
+            "apr": "0.001754347236260845832455027"
+          },
+          {
+            "token_id": "usdcc.fakes.testnet",
+            "balance": "260668156195",
+            "shares": "260306817547",
+            "apr": "0.000000385570713811131379631"
+          },
+          {
+            "token_id": "3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af",
+            "balance": "2574926676",
+            "shares": "2574605895",
+            "apr": "0.000002228421709012133684245"
+          },
+          {
+            "token_id": "usdc.fakes.testnet",
+            "balance": "42968851259538817224757",
+            "shares": "3180000000179822981598",
+            "apr": "2.368812670301423034697802672"
+          },
+          {
+            "token_id": "dai.fakes.testnet",
+            "balance": "109458989372060162064",
+            "shares": "100000000000000000000",
+            "apr": "0.031295889742073020475893551"
+          },
+          {
+            "token_id": "usdt.fakes.testnet",
+            "balance": "100027421020338173344",
+            "shares": "100000000004321597521",
+            "apr": "0.00000000238251474533711929"
+          },
+          {
+            "token_id": "wrap.testnet",
+            "balance": "1024901048431310054941377",
+            "shares": "1000000000000000000000000",
+            "apr": "1.978818467250246350471476384"
+          }
+        ],
+        "collateral": [
+          {
+            "token_id": "usdc.fakes.testnet",
+            "balance": "5202203689933009073310",
+            "shares": "385000000000000000000",
+            "apr": "2.368812670301423034697802672"
+          }
+        ],
+        "borrowed": [
+          {
+            "token_id": "usdt.fakes.testnet",
+            "balance": "121098520756",
+            "shares": "121004727769",
+            "apr": "0.000017467774364490257869219"
+          }
+        ],
+        "farms": [
+          {
+            "farm_id": "NetTvl",
+            "rewards": []
+          }
+        ],
+        "has_non_farmed_assets": true,
+        "booster_staking": null
+      }
+    },
+    {
+      "contractId": "dai.fakes.testnet",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Dai Stablecoin",
+        "symbol": "DAI",
+        "icon": "data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle fill='%23F4B731' fill-rule='nonzero' cx='16' cy='16' r='16'/%3E%3Cpath d='M9.277 8h6.552c3.985 0 7.006 2.116 8.13 5.194H26v1.861h-1.611c.031.294.047.594.047.898v.046c0 .342-.02.68-.06 1.01H26v1.86h-2.08C22.767 21.905 19.77 24 15.83 24H9.277v-5.131H7v-1.86h2.277v-1.954H7v-1.86h2.277V8zm1.831 10.869v3.462h4.72c2.914 0 5.078-1.387 6.085-3.462H11.108zm11.366-1.86H11.108v-1.954h11.37c.041.307.063.622.063.944v.045c0 .329-.023.65-.067.964zM15.83 9.665c2.926 0 5.097 1.424 6.098 3.528h-10.82V9.666h4.72z' fill='%23FFF'/%3E%3C/g%3E%3C/svg%3E",
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 18
+      }
+    },
+    {
+      "contractId": "pyth-oracle.testnet",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "87a67534df591d2dd5ec577ab3c75668a8e3d35e92e27bf29d9e2e52df8de412",
+        "age": 60
+      },
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": null
+    },
+    {
+      "contractId": "usdt.fakes.testnet",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Tether USD",
+        "symbol": "USDT.e",
+        "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle cx='16' cy='16' r='16' fill='%2326A17B'/%3E%3Cpath fill='%23FFF' d='M17.922 17.383v-.002c-.11.008-.677.042-1.942.042-1.01 0-1.721-.03-1.971-.042v.003c-3.888-.171-6.79-.848-6.79-1.658 0-.809 2.902-1.486 6.79-1.66v2.644c.254.018.982.061 1.988.061 1.207 0 1.812-.05 1.925-.06v-2.643c3.88.173 6.775.85 6.775 1.658 0 .81-2.895 1.485-6.775 1.657m0-3.59v-2.366h5.414V7.819H8.595v3.608h5.414v2.365c-4.4.202-7.709 1.074-7.709 2.118 0 1.044 3.309 1.915 7.709 2.118v7.582h3.913v-7.584c4.393-.202 7.694-1.073 7.694-2.116 0-1.043-3.301-1.914-7.694-2.117'/%3E%3C/g%3E%3C/svg%3E",
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 6
+      }
+    },
+    {
+      "contractId": "pyth-oracle.testnet",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "1fc18861232290221461220bd4e2acd1dcdfbc89c84092c93c18bdc7756c1588",
+        "age": 60
+      },
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": null
+    },
+    {
+      "contractId": "usdc.fakes.testnet",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Bridged USDC",
+        "symbol": "USDC.e",
+        "icon": "data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Ccircle cx='16' cy='16' r='16' fill='%232775C9'/%3E%3Cpath d='M15.75 27.5C9.26 27.5 4 22.24 4 15.75S9.26 4 15.75 4 27.5 9.26 27.5 15.75A11.75 11.75 0 0115.75 27.5zm-.7-16.11a2.58 2.58 0 00-2.45 2.47c0 1.21.74 2 2.31 2.33l1.1.26c1.07.25 1.51.61 1.51 1.22s-.77 1.21-1.77 1.21a1.9 1.9 0 01-1.8-.91.68.68 0 00-.61-.39h-.59a.35.35 0 00-.28.41 2.73 2.73 0 002.61 2.08v.84a.705.705 0 001.41 0v-.85a2.62 2.62 0 002.59-2.58c0-1.27-.73-2-2.46-2.37l-1-.22c-1-.25-1.47-.58-1.47-1.14 0-.56.6-1.18 1.6-1.18a1.64 1.64 0 011.59.81.8.8 0 00.72.46h.47a.42.42 0 00.31-.5 2.65 2.65 0 00-2.38-2v-.69a.705.705 0 00-1.41 0v.74zm-8.11 4.36a8.79 8.79 0 006 8.33h.14a.45.45 0 00.45-.45v-.21a.94.94 0 00-.58-.87 7.36 7.36 0 010-13.65.93.93 0 00.58-.86v-.23a.42.42 0 00-.56-.4 8.79 8.79 0 00-6.03 8.34zm17.62 0a8.79 8.79 0 00-6-8.32h-.15a.47.47 0 00-.47.47v.15a1 1 0 00.61.9 7.36 7.36 0 010 13.64 1 1 0 00-.6.89v.17a.47.47 0 00.62.44 8.79 8.79 0 005.99-8.34z' fill='%23FFF'/%3E%3C/g%3E%3C/svg%3E",
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 6
+      }
+    },
+    {
+      "contractId": "pyth-oracle.testnet",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "41f3625971ca2ed2263e78573fe5ce23e13d2558ed3f2e47ab0f84fb9e7ae722",
+        "age": 60
+      },
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": null
+    },
+    {
+      "contractId": "wrap.testnet",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Wrapped NEAR fungible token",
+        "symbol": "wNEAR",
+        "icon": null,
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 24
+      }
+    },
+    {
+      "contractId": "token.1689937928.burrow.testnet",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Booster Token (1689937928)",
+        "symbol": "BOOSTER-1689937928",
+        "icon": null,
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 18
+      }
+    },
+    {
+      "contractId": "linear-protocol.testnet",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "LiNEAR",
+        "symbol": "LINEAR",
+        "icon": "data:image/svg+xml,%3Csvg width='40' height='40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M30.74 28.78c.21-.36.32-.78.32-1.21v-6.33c0-.24-.06-.46-.17-.66-.12-.21-.28-.38-.48-.49l-16.86-9.77c-.35-.2-.73-.31-1.13-.32-.64 0-1.24.26-1.69.72-.45.45-.7 1.07-.71 1.71v6.39c0 .24.06.47.18.67.11.21.28.37.48.48l16.82 9.71c.36.22.77.32 1.19.32.41 0 .82-.12 1.19-.33.36-.21.66-.52.86-.89zm.32-16.27c0-.42-.1-.84-.29-1.21-.2-.38-.49-.7-.85-.93-.36-.22-.78-.34-1.21-.34-.42 0-.84.12-1.21.34l-4.97 2.81c-.04.02-.08.07-.1.12-.03.04-.04.1-.04.14 0 .06.01.11.04.16.02.04.06.08.1.1l8.05 4.62c.05.02.1.04.15.04.05 0 .1-.02.15-.05.04-.02.08-.06.11-.11.02-.04.04-.1.03-.15l.04-5.54zM10.05 27.5c-.01.43.08.86.28 1.23.2.38.49.7.85.93.36.22.78.34 1.2.34.42 0 .83-.12 1.2-.34l4.92-2.85c.04-.02.08-.06.1-.11.03-.04.05-.1.05-.15 0-.05-.02-.11-.05-.15-.02-.05-.06-.09-.1-.12l-8.05-4.6c-.05-.03-.09-.04-.15-.04-.05 0-.1.01-.15.04-.05.02-.08.07-.11.12-.02.04-.04.09-.04.14l.05 5.56z' fill='url(%23paint0_linear_186_370)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_186_370' x1='11.135' y1='11.152' x2='30.145' y2='30.457' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%231BB3CC'/%3E%3Cstop offset='1' stop-color='%23824ACC'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E",
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 24
+      }
+    },
+    {
+      "contractId": "pyth-oracle.testnet",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "27e867f0f4f61076456d1a73b14c7edc1cf5cef4f4d6193a33424288f11bd0f4",
+        "age": 60
+      },
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": null
+    },
+    {
+      "contractId": "linear-protocol.testnet",
+      "method": "ft_price",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": "2284175768908950653602947"
+    },
+    {
+      "contractId": "eth.fakes.testnet",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Ether",
+        "symbol": "ETH",
+        "icon": "data:image/png;base64,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",
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 18
+      }
+    },
+    {
+      "contractId": "pyth-oracle.testnet",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "ca80ba6dc32e08d06f1aa886011eed1d77c77be9eb761cc10d72b7d0a2fd57a6",
+        "age": 60
+      },
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": null
+    },
+    {
+      "contractId": "usdtt.fakes.testnet",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Tether USD",
+        "symbol": "USDt",
+        "icon": "data:image/svg+xml,%3Csvg width='111' height='90' viewBox='0 0 111 90' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M24.4825 0.862305H88.0496C89.5663 0.862305 90.9675 1.64827 91.7239 2.92338L110.244 34.1419C111.204 35.7609 110.919 37.8043 109.549 39.1171L58.5729 87.9703C56.9216 89.5528 54.2652 89.5528 52.6139 87.9703L1.70699 39.1831C0.305262 37.8398 0.0427812 35.7367 1.07354 34.1077L20.8696 2.82322C21.6406 1.60483 23.0087 0.862305 24.4825 0.862305ZM79.8419 14.8003V23.5597H61.7343V29.6329C74.4518 30.2819 83.9934 32.9475 84.0642 36.1425L84.0638 42.803C83.993 45.998 74.4518 48.6635 61.7343 49.3125V64.2168H49.7105V49.3125C36.9929 48.6635 27.4513 45.998 27.3805 42.803L27.381 36.1425C27.4517 32.9475 36.9929 30.2819 49.7105 29.6329V23.5597H31.6028V14.8003H79.8419ZM55.7224 44.7367C69.2943 44.7367 80.6382 42.4827 83.4143 39.4727C81.0601 36.9202 72.5448 34.9114 61.7343 34.3597V40.7183C59.7966 40.8172 57.7852 40.8693 55.7224 40.8693C53.6595 40.8693 51.6481 40.8172 49.7105 40.7183V34.3597C38.8999 34.9114 30.3846 36.9202 28.0304 39.4727C30.8066 42.4827 42.1504 44.7367 55.7224 44.7367Z' fill='%23009393'/%3E%3C/svg%3E",
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 6
+      }
+    },
+    {
+      "contractId": "pyth-oracle.testnet",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "1fc18861232290221461220bd4e2acd1dcdfbc89c84092c93c18bdc7756c1588",
+        "age": 60
+      },
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": null
+    },
+    {
+      "contractId": "usdcc.fakes.testnet",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "icon": "data:image/svg+xml,%3C%3Fxml version=%221.0%22 encoding=%22utf-8%22%3F%3E%3C!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version=%221.1%22 id=%22Layer_1%22 xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 x=%220px%22 y=%220px%22 viewBox=%220 0 256 256%22 style=%22enable-background:new 0 0 256 256;%22 xml:space=%22preserve%22%3E%3Cstyle type=%22text/css%22%3E .st0%7Bfill:%232775CA;%7D .st1%7Bfill:%23FFFFFF;%7D%0A%3C/style%3E%3Ccircle class=%22st0%22 cx=%22128%22 cy=%22128%22 r=%22128%22/%3E%3Cpath class=%22st1%22 d=%22M104,217c0,3-2.4,4.7-5.2,3.8C60,208.4,32,172.2,32,129.3c0-42.8,28-79.1,66.8-91.5c2.9-0.9,5.2,0.8,5.2,3.8 v7.5c0,2-1.5,4.3-3.4,5C69.9,65.4,48,94.9,48,129.3c0,34.5,21.9,63.9,52.6,75.1c1.9,0.7,3.4,3,3.4,5V217z%22/%3E%3Cpath class=%22st1%22 d=%22M136,189.3c0,2.2-1.8,4-4,4h-8c-2.2,0-4-1.8-4-4v-12.6c-17.5-2.4-26-12.1-28.3-25.5c-0.4-2.3,1.4-4.3,3.7-4.3 h9.1c1.9,0,3.5,1.4,3.9,3.2c1.7,7.9,6.3,14,20.3,14c10.3,0,17.7-5.8,17.7-14.4c0-8.6-4.3-11.9-19.5-14.4c-22.4-3-33-9.8-33-27.3 c0-13.5,10.3-24.1,26.1-26.3V69.3c0-2.2,1.8-4,4-4h8c2.2,0,4,1.8,4,4v12.7c12.9,2.3,21.1,9.6,23.8,21.8c0.5,2.3-1.3,4.4-3.7,4.4 h-8.4c-1.8,0-3.3-1.2-3.8-2.9c-2.3-7.7-7.8-11.1-17.4-11.1c-10.6,0-16.1,5.1-16.1,12.3c0,7.6,3.1,11.4,19.4,13.7 c22,3,33.4,9.3,33.4,28c0,14.2-10.6,25.7-27.1,28.3V189.3z%22/%3E%3Cpath class=%22st1%22 d=%22M157.2,220.8c-2.9,0.9-5.2-0.8-5.2-3.8v-7.5c0-2.2,1.3-4.3,3.4-5c30.6-11.2,52.6-40.7,52.6-75.1 c0-34.5-21.9-63.9-52.6-75.1c-1.9-0.7-3.4-3-3.4-5v-7.5c0-3,2.4-4.7,5.2-3.8C196,50.2,224,86.5,224,129.3 C224,172.2,196,208.4,157.2,220.8z%22/%3E%3C/svg%3E%0A",
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 6
+      }
+    },
+    {
+      "contractId": "pyth-oracle.testnet",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "41f3625971ca2ed2263e78573fe5ce23e13d2558ed3f2e47ab0f84fb9e7ae722",
+        "age": 60
+      },
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": null
+    },
+    {
+      "contractId": "3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "USDC",
+        "symbol": "USDC",
+        "icon": "data:image/svg+xml,%3C%3Fxml version=%221.0%22 encoding=%22utf-8%22%3F%3E%3C!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version=%221.1%22 id=%22Layer_1%22 xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 x=%220px%22 y=%220px%22 viewBox=%220 0 256 256%22 style=%22enable-background:new 0 0 256 256;%22 xml:space=%22preserve%22%3E%3Cstyle type=%22text/css%22%3E .st0%7Bfill:%232775CA;%7D .st1%7Bfill:%23FFFFFF;%7D%0A%3C/style%3E%3Ccircle class=%22st0%22 cx=%22128%22 cy=%22128%22 r=%22128%22/%3E%3Cpath class=%22st1%22 d=%22M104,217c0,3-2.4,4.7-5.2,3.8C60,208.4,32,172.2,32,129.3c0-42.8,28-79.1,66.8-91.5c2.9-0.9,5.2,0.8,5.2,3.8 v7.5c0,2-1.5,4.3-3.4,5C69.9,65.4,48,94.9,48,129.3c0,34.5,21.9,63.9,52.6,75.1c1.9,0.7,3.4,3,3.4,5V217z%22/%3E%3Cpath class=%22st1%22 d=%22M136,189.3c0,2.2-1.8,4-4,4h-8c-2.2,0-4-1.8-4-4v-12.6c-17.5-2.4-26-12.1-28.3-25.5c-0.4-2.3,1.4-4.3,3.7-4.3 h9.1c1.9,0,3.5,1.4,3.9,3.2c1.7,7.9,6.3,14,20.3,14c10.3,0,17.7-5.8,17.7-14.4c0-8.6-4.3-11.9-19.5-14.4c-22.4-3-33-9.8-33-27.3 c0-13.5,10.3-24.1,26.1-26.3V69.3c0-2.2,1.8-4,4-4h8c2.2,0,4,1.8,4,4v12.7c12.9,2.3,21.1,9.6,23.8,21.8c0.5,2.3-1.3,4.4-3.7,4.4 h-8.4c-1.8,0-3.3-1.2-3.8-2.9c-2.3-7.7-7.8-11.1-17.4-11.1c-10.6,0-16.1,5.1-16.1,12.3c0,7.6,3.1,11.4,19.4,13.7 c22,3,33.4,9.3,33.4,28c0,14.2-10.6,25.7-27.1,28.3V189.3z%22/%3E%3Cpath class=%22st1%22 d=%22M157.2,220.8c-2.9,0.9-5.2-0.8-5.2-3.8v-7.5c0-2.2,1.3-4.3,3.4-5c30.6-11.2,52.6-40.7,52.6-75.1 c0-34.5-21.9-63.9-52.6-75.1c-1.9-0.7-3.4-3-3.4-5v-7.5c0-3,2.4-4.7,5.2-3.8C196,50.2,224,86.5,224,129.3 C224,172.2,196,208.4,157.2,220.8z%22/%3E%3C/svg%3E%0A",
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 6
+      }
+    },
+    {
+      "contractId": "pyth-oracle.testnet",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "41f3625971ca2ed2263e78573fe5ce23e13d2558ed3f2e47ab0f84fb9e7ae722",
+        "age": 60
+      },
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": null
+    },
+    {
+      "contractId": "ref.fakes.testnet",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Ref Finance Token",
+        "symbol": "REF",
+        "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='16 24 248 248' style='background: %23000'%3E%3Cpath d='M164,164v52h52Zm-45-45,20.4,20.4,20.6-20.6V81H119Zm0,18.39V216h41V137.19l-20.6,20.6ZM166.5,81H164v33.81l26.16-26.17A40.29,40.29,0,0,0,166.5,81ZM72,153.19V216h43V133.4l-11.6-11.61Zm0-18.38,31.4-31.4L115,115V81H72ZM207,121.5h0a40.29,40.29,0,0,0-7.64-23.66L164,133.19V162h2.5A40.5,40.5,0,0,0,207,121.5Z' fill='%23fff'/%3E%3Cpath d='M189 72l27 27V72h-27z' fill='%2300c08b'/%3E%3C/svg%3E%0A",
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 18
+      }
+    },
+    {
+      "contractId": "usdtt.ft.ref-labs.testnet",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Tether USD",
+        "symbol": "b-USDt",
+        "icon": "data:image/svg+xml,%3Csvg width='111' height='90' viewBox='0 0 111 90' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M24.4825 0.862305H88.0496C89.5663 0.862305 90.9675 1.64827 91.7239 2.92338L110.244 34.1419C111.204 35.7609 110.919 37.8043 109.549 39.1171L58.5729 87.9703C56.9216 89.5528 54.2652 89.5528 52.6139 87.9703L1.70699 39.1831C0.305262 37.8398 0.0427812 35.7367 1.07354 34.1077L20.8696 2.82322C21.6406 1.60483 23.0087 0.862305 24.4825 0.862305ZM79.8419 14.8003V23.5597H61.7343V29.6329C74.4518 30.2819 83.9934 32.9475 84.0642 36.1425L84.0638 42.803C83.993 45.998 74.4518 48.6635 61.7343 49.3125V64.2168H49.7105V49.3125C36.9929 48.6635 27.4513 45.998 27.3805 42.803L27.381 36.1425C27.4517 32.9475 36.9929 30.2819 49.7105 29.6329V23.5597H31.6028V14.8003H79.8419ZM55.7224 44.7367C69.2943 44.7367 80.6382 42.4827 83.4143 39.4727C81.0601 36.9202 72.5448 34.9114 61.7343 34.3597V40.7183C59.7966 40.8172 57.7852 40.8693 55.7224 40.8693C53.6595 40.8693 51.6481 40.8172 49.7105 40.7183V34.3597C38.8999 34.9114 30.3846 36.9202 28.0304 39.4727C30.8066 42.4827 42.1504 44.7367 55.7224 44.7367Z' fill='%23009393'/%3E%3C/svg%3E",
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 6
+      }
+    },
+    {
+      "contractId": "pyth-oracle.testnet",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "1fc18861232290221461220bd4e2acd1dcdfbc89c84092c93c18bdc7756c1588",
+        "age": 60
+      },
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": null
+    },
+    {
+      "contractId": "usdcc.ft.ref-labs.testnet",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "USDC",
+        "symbol": "b-USDC",
+        "icon": "data:image/svg+xml,%3C%3Fxml version=%221.0%22 encoding=%22utf-8%22%3F%3E%3C!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version=%221.1%22 id=%22Layer_1%22 xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 x=%220px%22 y=%220px%22 viewBox=%220 0 256 256%22 style=%22enable-background:new 0 0 256 256;%22 xml:space=%22preserve%22%3E%3Cstyle type=%22text/css%22%3E .st0%7Bfill:%232775CA;%7D .st1%7Bfill:%23FFFFFF;%7D%0A%3C/style%3E%3Ccircle class=%22st0%22 cx=%22128%22 cy=%22128%22 r=%22128%22/%3E%3Cpath class=%22st1%22 d=%22M104,217c0,3-2.4,4.7-5.2,3.8C60,208.4,32,172.2,32,129.3c0-42.8,28-79.1,66.8-91.5c2.9-0.9,5.2,0.8,5.2,3.8 v7.5c0,2-1.5,4.3-3.4,5C69.9,65.4,48,94.9,48,129.3c0,34.5,21.9,63.9,52.6,75.1c1.9,0.7,3.4,3,3.4,5V217z%22/%3E%3Cpath class=%22st1%22 d=%22M136,189.3c0,2.2-1.8,4-4,4h-8c-2.2,0-4-1.8-4-4v-12.6c-17.5-2.4-26-12.1-28.3-25.5c-0.4-2.3,1.4-4.3,3.7-4.3 h9.1c1.9,0,3.5,1.4,3.9,3.2c1.7,7.9,6.3,14,20.3,14c10.3,0,17.7-5.8,17.7-14.4c0-8.6-4.3-11.9-19.5-14.4c-22.4-3-33-9.8-33-27.3 c0-13.5,10.3-24.1,26.1-26.3V69.3c0-2.2,1.8-4,4-4h8c2.2,0,4,1.8,4,4v12.7c12.9,2.3,21.1,9.6,23.8,21.8c0.5,2.3-1.3,4.4-3.7,4.4 h-8.4c-1.8,0-3.3-1.2-3.8-2.9c-2.3-7.7-7.8-11.1-17.4-11.1c-10.6,0-16.1,5.1-16.1,12.3c0,7.6,3.1,11.4,19.4,13.7 c22,3,33.4,9.3,33.4,28c0,14.2-10.6,25.7-27.1,28.3V189.3z%22/%3E%3Cpath class=%22st1%22 d=%22M157.2,220.8c-2.9,0.9-5.2-0.8-5.2-3.8v-7.5c0-2.2,1.3-4.3,3.4-5c30.6-11.2,52.6-40.7,52.6-75.1 c0-34.5-21.9-63.9-52.6-75.1c-1.9-0.7-3.4-3-3.4-5v-7.5c0-3,2.4-4.7,5.2-3.8C196,50.2,224,86.5,224,129.3 C224,172.2,196,208.4,157.2,220.8z%22/%3E%3C/svg%3E%0A",
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 6
+      }
+    },
+    {
+      "contractId": "pyth-oracle.testnet",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "41f3625971ca2ed2263e78573fe5ce23e13d2558ed3f2e47ab0f84fb9e7ae722",
+        "age": 60
+      },
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": null
+    },
+    {
+      "contractId": "usdce.ft.ref-labs.testnet",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Bridged USDC",
+        "symbol": "b-USDC.e",
+        "icon": "data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Ccircle cx='16' cy='16' r='16' fill='%232775C9'/%3E%3Cpath d='M15.75 27.5C9.26 27.5 4 22.24 4 15.75S9.26 4 15.75 4 27.5 9.26 27.5 15.75A11.75 11.75 0 0115.75 27.5zm-.7-16.11a2.58 2.58 0 00-2.45 2.47c0 1.21.74 2 2.31 2.33l1.1.26c1.07.25 1.51.61 1.51 1.22s-.77 1.21-1.77 1.21a1.9 1.9 0 01-1.8-.91.68.68 0 00-.61-.39h-.59a.35.35 0 00-.28.41 2.73 2.73 0 002.61 2.08v.84a.705.705 0 001.41 0v-.85a2.62 2.62 0 002.59-2.58c0-1.27-.73-2-2.46-2.37l-1-.22c-1-.25-1.47-.58-1.47-1.14 0-.56.6-1.18 1.6-1.18a1.64 1.64 0 011.59.81.8.8 0 00.72.46h.47a.42.42 0 00.31-.5 2.65 2.65 0 00-2.38-2v-.69a.705.705 0 00-1.41 0v.74zm-8.11 4.36a8.79 8.79 0 006 8.33h.14a.45.45 0 00.45-.45v-.21a.94.94 0 00-.58-.87 7.36 7.36 0 010-13.65.93.93 0 00.58-.86v-.23a.42.42 0 00-.56-.4 8.79 8.79 0 00-6.03 8.34zm17.62 0a8.79 8.79 0 00-6-8.32h-.15a.47.47 0 00-.47.47v.15a1 1 0 00.61.9 7.36 7.36 0 010 13.64 1 1 0 00-.6.89v.17a.47.47 0 00.62.44 8.79 8.79 0 005.99-8.34z' fill='%23FFF'/%3E%3C/g%3E%3C/svg%3E",
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 6
+      }
+    },
+    {
+      "contractId": "pyth-oracle.testnet",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "41f3625971ca2ed2263e78573fe5ce23e13d2558ed3f2e47ab0f84fb9e7ae722",
+        "age": 60
+      },
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": null
+    },
+    {
+      "contractId": "usdte.ft.ref-labs.testnet",
+      "method": "ft_metadata",
+      "args": {},
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": {
+        "spec": "ft-1.0.0",
+        "name": "Tether USD",
+        "symbol": "b-USDT.e",
+        "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle cx='16' cy='16' r='16' fill='%2326A17B'/%3E%3Cpath fill='%23FFF' d='M17.922 17.383v-.002c-.11.008-.677.042-1.942.042-1.01 0-1.721-.03-1.971-.042v.003c-3.888-.171-6.79-.848-6.79-1.658 0-.809 2.902-1.486 6.79-1.66v2.644c.254.018.982.061 1.988.061 1.207 0 1.812-.05 1.925-.06v-2.643c3.88.173 6.775.85 6.775 1.658 0 .81-2.895 1.485-6.775 1.657m0-3.59v-2.366h5.414V7.819H8.595v3.608h5.414v2.365c-4.4.202-7.709 1.074-7.709 2.118 0 1.044 3.309 1.915 7.709 2.118v7.582h3.913v-7.584c4.393-.202 7.694-1.073 7.694-2.116 0-1.043-3.301-1.914-7.694-2.117'/%3E%3C/g%3E%3C/svg%3E",
+        "reference": null,
+        "reference_hash": null,
+        "decimals": 6
+      }
+    },
+    {
+      "contractId": "pyth-oracle.testnet",
+      "method": "get_price_no_older_than",
+      "args": {
+        "price_id": "1fc18861232290221461220bd4e2acd1dcdfbc89c84092c93c18bdc7756c1588",
+        "age": 60
+      },
+      "blockHeight": 276419739,
+      "blockHash": "2CwSM6GRX8jXaSBgDdiHx9DYW3eJy2MruF4zY3QRgGKX",
+      "data": null
+    }
+  ]
+}

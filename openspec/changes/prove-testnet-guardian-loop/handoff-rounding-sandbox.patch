@@ -1,0 +1,194 @@
+diff --git a/contracts/guardian/Cargo.toml b/contracts/guardian/Cargo.toml
+index b76e330..9cc2477 100644
+--- a/contracts/guardian/Cargo.toml
++++ b/contracts/guardian/Cargo.toml
+@@ -17,3 +17,9 @@ protocol-trigger = { path = "../protocol-trigger" }
+ 
+ [dev-dependencies]
+ near-sdk = { version = "=5.30.0", features = ["unit-testing"] }
++
++[package.metadata.near.reproducible_build]
++image = "sourcescan/cargo-near:0.22.0-rust-1.99.1"
++image_digest = "sha256:c9655eaf7436b90c87ea8b25739f91063032c5c30ba24cfeafe72c142943b5bb"
++passed_env = []
++container_build_command = ["cargo", "near", "build", "non-reproducible-wasm", "--locked", "--no-abi"]
+diff --git a/contracts/tests/tests/probe.rs b/contracts/tests/tests/probe.rs
+index 13a7043..62d0ee6 100644
+--- a/contracts/tests/tests/probe.rs
++++ b/contracts/tests/tests/probe.rs
+@@ -12,6 +12,8 @@ use support::encodings;
+ mod outcome_recordings;
+ #[path = "support/position_flow.rs"]
+ mod position_flow;
++#[path = "support/rounding_flow.rs"]
++mod rounding_flow;
+ 
+ async fn capture_outcome(
+     worker: &near_workspaces::Worker<near_workspaces::network::Sandbox>,
+@@ -1311,7 +1313,7 @@ async fn guardian_reserve_flow(
+     Ok(())
+ }
+ 
+-async fn cycle(network: &str) -> Result<()> {
++async fn cycle_with_rounding(network: &str, rounding: Option<&str>) -> Result<()> {
+     let metadata: Value = serde_json::from_slice(
+         &std::fs::read(target(&format!("probes/rhea-{network}.json")))
+             .context("Run scripts/probes/fetch-rhea-wasm.mjs first")?,
+@@ -1367,8 +1369,10 @@ async fn cycle(network: &str) -> Result<()> {
+         asset["supplied_limit"] = json!(u128::MAX.to_string());
+         asset["borrowed_limit"] = json!(u128::MAX.to_string());
+         asset["min_borrowed_amount"] = json!("1");
+-        asset["target_utilization_rate"] = json!("1000000000000000000000000000");
+-        asset["max_utilization_rate"] = json!("1000000000000000000000000000");
++        if rounding.is_none() {
++            asset["target_utilization_rate"] = json!("1000000000000000000000000000");
++            asset["max_utilization_rate"] = json!("1000000000000000000000000000");
++        }
+         call(
+             &owner,
+             &lending,
+@@ -1457,6 +1461,12 @@ async fn cycle(network: &str) -> Result<()> {
+         NearToken::from_yoctonear(0),
+     )
+     .await?;
++    if let Some(case) = rounding {
++        return rounding_flow::run(
++            &worker, &owner, &attacker, [&lending, &collateral, &debt, &oracle],
++            &metadata, case,
++        ).await;
++    }
+     call(
+         &owner,
+         &collateral,
+@@ -1694,6 +1704,25 @@ async fn cycle(network: &str) -> Result<()> {
+     );
+     Ok(())
+ }
++async fn cycle(network: &str) -> Result<()> {
++    cycle_with_rounding(network, None).await
++}
++
++#[tokio::test]
++async fn guardian_accrued_borrow() -> Result<()> {
++    cycle_with_rounding("testnet", Some("borrow")).await
++}
++
++#[tokio::test]
++async fn guardian_accrued_release() -> Result<()> {
++    cycle_with_rounding("testnet", Some("release")).await
++}
++
++#[tokio::test]
++async fn guardian_accrued_surplus_then_borrow() -> Result<()> {
++    cycle_with_rounding("testnet", Some("surplus")).await
++}
++
+ 
+ #[tokio::test]
+ async fn probe_testnet_wasm_cycle() -> Result<()> {
+diff --git a/contracts/tests/tests/support/rounding_flow.rs b/contracts/tests/tests/support/rounding_flow.rs
+new file mode 100644
+index 0000000..66f2282
+--- /dev/null
++++ b/contracts/tests/tests/support/rounding_flow.rs
+@@ -0,0 +1,100 @@
++//! Imported 0.11.0, nonzero interest, Simulated prices; never patches pool state.
++use super::*;
++
++async fn owner_action(owner: &Account, guardian: &Contract, method: &str, args: Value) -> Result<()> {
++    let result = owner.call(guardian.id(), method).args_json(args)
++        .deposit(NearToken::from_yoctonear(1)).max_gas().transact().await?;
++    assert!(result.failures().is_empty(), "{method}: {:?}", result.failures());
++    let status: Value = guardian.view("get_status").await?.json()?;
++    assert!(status["in_flight"].is_null(), "{status}");
++    Ok(())
++}
++
++async fn reserve(guardian: &Contract) -> Result<u128> {
++    let value: Value = guardian.view("get_reserve").await?.json()?;
++    Ok(value["reserve"].as_str().unwrap().parse()?)
++}
++
++pub async fn run(
++    worker: &near_workspaces::Worker<near_workspaces::network::Sandbox>,
++    owner: &Account,
++    watcher: &Account,
++    targets: [&Contract; 4],
++    source: &Value,
++    case: &str,
++) -> Result<()> {
++    let [lending, collateral, debt, oracle] = targets;
++    let extra = 10u128.pow(12);
++    // Two utilized pools earn actual interest in imported Rhea bytecode.
++    call(owner, collateral, "ft_transfer_call", json!({"receiver_id":lending.id(),"amount":"100000000","msg":""}), NearToken::from_yoctonear(1)).await?;
++    call(owner, lending, "execute_with_pyth", json!({"actions":[
++        {"IncreaseCollateral":{"token_id":debt.id(),"amount":(500_000_000 * extra).to_string()}},
++        {"Borrow":{"token_id":collateral.id(),"amount":"10000000"}},
++        {"Borrow":{"token_id":debt.id(),"amount":(10_000_000 * extra).to_string()}}
++    ]}), NearToken::from_yoctonear(1)).await?;
++    let guardian = worker.dev_deploy(&std::fs::read(target("near/guardian/guardian.wasm"))?).await?;
++    call(owner, &guardian, "new", json!({
++        "config":{"owner_id":owner.id(),"watcher_id":watcher.id(),"lending_id":lending.id(),"oracle_id":oracle.id(),"debt_token_id":debt.id(),"collateral_token_ids":[collateral.id()],"fee_recipient_id":owner.id(),"activation_fee":"0","lending_version":source["version"],"debt_extra_decimals":12,"collateral_extra_decimals":0,"collateral_price_id":"11".repeat(32),"debt_price_id":"22".repeat(32),"max_price_age_sec":60},
++        "policy":{"max_per_action":"1000000","lifetime_cap":"10000000","reserve_floor":"100","trigger_hf_bps":12000,"target_hf_bps":null,"cooldown_sec":300,"action_fee":"0"}
++    }), NearToken::from_yoctonear(0)).await?;
++    guardian.batch().delete_key(guardian.as_account().secret_key().public_key()).transact().await?.into_result()?;
++    assert!(guardian.view_access_keys().await?.is_empty());
++    for target in [lending, collateral, debt] {
++        owner_action(owner, &guardian, "owner_register", json!({"target_id":target.id(),"storage_deposit":"1000000000000000000000000"})).await?;
++    }
++    call(owner, collateral, "ft_transfer_call", json!({"receiver_id":guardian.id(),"amount":"100000000","msg":"{\"collateral\":{}}"}), NearToken::from_yoctonear(1)).await?;
++    worker.fast_forward(100_000).await?;
++    // get_assets updates projected balances in its view; prove neither pool is 1:1.
++    let assets: Value = lending.view("get_assets").args_json(json!({"token_ids":[collateral.id(),debt.id()]})).await?.json()?;
++    println!("accrued pools: {assets}");
++    for asset in assets.as_array().unwrap() {
++        let supplied = &asset["supplied"];
++        let shares: u128 = supplied["shares"].as_str().unwrap().parse()?;
++        let total: u128 = supplied["balance"].as_str().unwrap().parse()?;
++        assert!(total > shares, "interest must move share price above one: {asset}");
++    }
++    if case == "release" {
++        let before = position(lending, guardian.as_account()).await?;
++        let before_collateral: u128 = before["collateral"][0]["balance"].as_str().unwrap().parse()?;
++        owner_action(owner, &guardian, "owner_withdraw_collateral", json!({"amount":"50000000"})).await?;
++        let after = position(lending, guardian.as_account()).await?;
++        let remaining: u128 = after["collateral"][0]["balance"].as_str().unwrap().parse()?;
++        let received = balance(collateral, guardian.as_account()).await?;
++        assert!((49_999_998..=50_000_000).contains(&received), "rounded received {received}");
++        assert!(remaining < before_collateral - 49_000_000);
++        assert_eq!(reserve(&guardian).await?, 0);
++        return Ok(());
++    }
++    // For the interaction case create an earlier repay surplus before borrowing.
++    // A direct imported-Rhea borrow with amountless Withdraw seeds the first loan;
++    // Guardian itself remains the caller via its owner method for all later actions.
++    owner_action(owner, &guardian, "owner_borrow", json!({"amount":"50000000"})).await?;
++    let first_received = balance(debt, guardian.as_account()).await?;
++    assert!((49_999_998..=50_000_000).contains(&first_received));
++    assert_eq!(reserve(&guardian).await?, 0);
++    if case == "borrow" {
++        assert!(!position(lending, guardian.as_account()).await?["borrowed"].as_array().unwrap().is_empty());
++        return Ok(());
++    }
++    call(owner, debt, "ft_transfer_call", json!({"receiver_id":guardian.id(),"amount":"80000000","msg":"{\"reserve\":{}}"}), NearToken::from_yoctonear(1)).await?;
++    owner_action(owner, &guardian, "owner_repay_from_reserve", json!({"amount":"60000000"})).await?;
++    assert_eq!(reserve(&guardian).await?, 20_000_000);
++    let repaid = position(lending, guardian.as_account()).await?;
++    assert_eq!(repaid["borrowed"], json!([]));
++    let surplus: u128 = repaid["supplied"][0]["balance"].as_str().unwrap().parse()?;
++    assert!(surplus > 9_000_000 * extra && surplus < 10_000_000 * extra);
++    let before_balance = balance(debt, guardian.as_account()).await?;
++    owner_action(owner, &guardian, "owner_borrow", json!({"amount":"10000000"})).await?;
++    assert_eq!(position(lending, guardian.as_account()).await?["supplied"], json!([]));
++    let after_balance = balance(debt, guardian.as_account()).await?;
++    assert!(after_balance > before_balance + 19_000_000, "withdraw also recovered earlier surplus");
++    assert_eq!(reserve(&guardian).await?, 20_000_000, "I8: recovered supplied tokens are never rebooked");
++    let owner_before = balance(debt, owner).await?;
++    owner_action(owner, &guardian, "owner_sweep", json!({"token_id":debt.id()})).await?;
++    assert_eq!(balance(debt, guardian.as_account()).await?, 20_000_000, "I4/I8: sweep cannot touch reserve");
++    assert_eq!(balance(debt, owner).await?, owner_before + after_balance - 20_000_000);
++    assert_eq!(reserve(&guardian).await?, 20_000_000);
++    owner_action(owner, &guardian, "owner_sweep", json!({"token_id":debt.id()})).await?;
++    assert_eq!(balance(debt, guardian.as_account()).await?, 20_000_000, "negative: second sweep cannot drain booked funds");
++    Ok(())
++}

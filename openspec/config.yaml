@@ -1,0 +1,43 @@
+schema: spec-driven
+context: |
+  Mr.Fund: NEAR/Rhea conversational debt manager. Read CLAUDE.md, docs/PRD.md,
+  docs/OPEN-DECISIONS.md, docs/BUILD-PLAN.md and docs/technical/*.md before changes.
+  See openspec/EXPLORATION.md for dependency ordering and unresolved gates.
+  D16 is Next.js App Router + separate Node watcher + Rust near-sdk Guardian.
+  D30 preserves protocol APR end to end. Money uses bigint/u128; Rhea internal
+  units differ from token atomic units. AI explains, engine computes, contract authorizes.
+  Agent never signs; watcher never imports agent. No database required in P0.
+  D31 authorizes dual-login adapters and framework-independent session logic only.
+  User deferred all UI-related work on 2026-11-08: no React wiring or /connect screen.
+  D18 G1 Guardian-held loan is decided.
+  D19 remains open. D27 has composed sandbox proof, not public token/oracle proof.
+  Sandbox prices are Simulated, never live evidence. GLM 5.3 Flash is the user's
+  initial chat model; runtime/evaluation evidence is recorded in D25 and CHAT-API.
+  Follow existing Result/validation conventions and pinned dependency versions.
+rules:
+  proposal:
+    - Reference BUILD-PLAN tasks and explicit external gates; do not silently decide founder choices.
+  design:
+    - Money paths state permission boundary, invariant, negative tests and limits.
+  tasks:
+    - Separate local implementation from external evidence and authorization gates.
+    - Update owning docs and BUILD-PLAN only with observed verification evidence.
+
+# Project context (optional)
+# This is shown to AI when creating artifacts.
+# Add your tech stack, conventions, style guides, domain knowledge, etc.
+# Example:
+#   context: |
+#     Tech stack: TypeScript, React, Node.js
+#     We use conventional commits
+#     Domain: e-commerce platform
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always include a "Non-goals" section
+#     tasks:
+#       - Break tasks into chunks of max 2 hours

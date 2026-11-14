@@ -1,0 +1,21 @@
+{
+  "name": "@mrfund/server",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./chat": "./src/chat-route.ts",
+    "./position": "./src/position-route.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@mrfund/agent": "workspace:*",
+    "@mrfund/engine": "workspace:*",
+    "@mrfund/guardian-client": "workspace:*",
+    "@mrfund/rhea": "workspace:*",
+    "@mrfund/shared": "workspace:*"
+  }
+}
